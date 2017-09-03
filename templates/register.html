@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>账户注册|天狗商城</title>
+<script src="Bootstrap/jquery-3.2.1.min.js"></script>
+
+
+	<!--页脚模块样式-->
+	<style>
+		@media screen and (min-width: 1200px){
+			.footer2{
+				width: 1200px;
+				margin: auto;
+			}
+		}
+		.footer2{
+			min-width: 1000px;
+			font-size: 12px;
+		}
+		.line1{
+			margin: 50px auto 10px auto;
+		}
+		.line1 span{
+			color: white;
+		}
+		.line1 a{
+			padding: 0 5px;
+			text-decoration: none;
+			color: black;
+		}
+		.line2{
+			color: #A4A4A4;
+			margin: 10px auto;
+		}
+		.line2 a{
+			color: #A4A4A4;
+			text-decoration: none;
+		}
+		.line2 div{
+			display: inline;
+			padding: 0 5px;
+		}
+		.line3 a {
+			color: #A4A4A4;
+			text-decoration: none;
+			padding: 0 5px;
+		}
+	</style>
+	
+	
+	<!--注册表单模块-->
+	<style>
+		@media screen and (min-width: 1200px){
+			div.register{
+				width: 1200px;
+			}
+			form.register{
+				width:800px; 
+			}
+		}
+		div.register{
+			margin: 20px auto;
+		}
+		form.register{
+			padding: 200px 20px;
+			width: 800px;
+			margin: auto;
+			border: 1px #66CCFF solid;
+			background-image:url(Pictures/registerBackground.jpg);
+			background-size: auto 100%;
+			border-radius: 8px;
+		}
+		img{
+			width: 50%;
+			margin: -50px 50px 10px 0;
+			opacity: 1.5;
+		}
+		.input{
+			margin: 40px 20px;
+		}
+		.submit{
+			margin-left: 350px;
+		}
+		input{
+			line-height: 26px;
+			height: 26px;
+			width: 500px;
+			border: 1px solid #66CCFF;
+			border-radius: 5px;
+		}
+		.input span{
+			font-size: 20px;
+			color: black;
+			font-weight: bold;
+		}
+		button{
+			margin-left: -100px; 
+			height: 30px;
+			width: 280px;
+			background-color: #66CCFF;
+			border: none;
+			border-radius: 3px;
+			font-family: Aria;
+			font-size: 16px;
+			line-height: 30px;
+			color: #666666;
+		}
+		button:hover{
+			cursor: pointer;
+			opacity: 0.8;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<!--注册表单模块-->
+	<div class="register">
+		<form class="register" action="{{url_for('register')}}" method="POST">
+			<div class="img">
+				<img src="Pictures/simplelogo.png">
+			</div>
+			<div class="userName input">
+				<span>用&ensp;户&ensp;名:&emsp;&emsp;</span>
+				<input type="text" name="username" placeholder="请输入您的用户名" required="required" oninvalid="this.setCustomValidity('请输入您的用户名');">
+			</div>
+			<div class="pwd input">
+				<span>密&emsp;&emsp;码:&emsp;&emsp;</span>
+				<input type="password" name="password" placeholder="请输入您的密码" required="required" oninvalid="this.setCustomValidity('请输入您的密码');">
+			</div>
+<!-- 			<div class="email input">
+				<span>邮&emsp;&emsp;箱:&emsp;&emsp;</span>
+				<input type="text" placeholder="请输入您的邮箱" required="required" oninvalid="this.setCustomValidity('请输入您的邮箱');">
+			</div> -->
+			<div class="submit input">
+				<a href="logIn.html"><div class="btn"><button type="submit" value="test"><strong>注册</strong></button></div></a>
+			</div>
+		</form>
+		
+	</div>
+	
+	
+	<!--页脚模块-->
+	<div class="footer2">
+		<div class="line1">
+			<a href="#here">关于天狗</a>
+			<a href="#here">帮助中心</a>
+			<a href="#here">开放平台</a>
+			<a href="#here">诚聘英才</a>
+			<a href="#here">联系我们<span>我们也不会回复</span></a>
+			<a href="#here">网站合作</a>
+			<a href="#here">法律声明及隐私权政策</a>
+			<a href="#here"><del>知识产权</del><span>这种东西我们没有</span></a>
+			<a href="#here">廉政举报</a>
+			<a href="#here">规则意见征集<span>我们也不会听</span></a>
+		</div>
+		<div class="line2">
+			<div>增值电信业务经营许可证：<a href="#here"> 浙B2-20110446</a></div>
+			<div>网络文化经营许可证：<a href="#here">浙网文[2015]0295-065号</a></div>
+			<div><a href="#here">12318举报</a></div>
+		</div>
+		<div class="line3">
+			<a href="#here">©2017-2017天狗网版权所有</a>
+		</div>
+	</div>
+</body>
+</html>

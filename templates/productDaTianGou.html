@@ -1,0 +1,1068 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>天狗周边 大天狗抱枕/靠垫</title>
+<script type="text/javascript" src="{{
+  url_for('static', filename='Bootstrap/jquery-3.2.1.min.js') }}"></script>
+<!-- <script src="Bootstrap/jquery-3.2.1.min.js"></script> -->
+<link type="text/css" href="{{
+  url_for('static', filename='Bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css') }}" rel="stylesheet">
+<!-- <link href="Bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet"> -->
+<script type="text/javascript" src="{{
+  url_for('static', filename='Bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js') }}"></script>
+<!-- <script src="Bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script> -->
+<link type="text/css" href="{{
+  url_for('static', filename='icon/font_we0rc7skyj9bpgb9/iconfont.css') }}" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="icon/font_we0rc7skyj9bpgb9/iconfont.css"> -->
+<link type="text/css" href="{{
+  url_for('static', filename='jQuery/jquery-ui-1.12.1.custom/jquery-ui.css') }}" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="jQuery/jquery-ui-1.12.1.custom/jquery-ui.css"> -->
+
+
+
+	<!--顶部导航条模块样式-->
+	<style>
+		@media screen and (min-width: 1200px){
+			.topNavText{
+				max-width: 1200px;
+				margin: auto;
+			}
+			.myGoods{
+				max-width: 1200px;
+			}
+		} 
+		body{
+			font-size: 12px;
+			font-family: Arial;
+		}
+		.topNav {
+			position:relative;
+			background-color: #F2F2F2;
+			width: 100%;
+			min-width: 1000px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 12px;	
+			font-family: Arial;
+			border-bottom: 1px solid #E7E7E7;
+			color: #999999;
+		}
+		.topNav .topNavBlue{
+				color: #66CCFF;
+			}
+		.topNavText a{
+			text-decoration: none;
+			color: #999999;
+			margin: 0 10px 0 10px;
+		}
+		.leftTopNav{
+			margin: 0 10px 0 10px;
+		}
+		.topNavText a:hover{
+			color: #66ccff;
+			text-decoration: none;
+		}
+		.rightTopNav>div{
+			float: left;
+		}
+		.myGoods,.myFavorite{
+			background-color: white;
+			text-align: center;
+			width: 100px;
+			height: 70px;
+			border: 1px solid #F2F2F2;
+			border-top-color: white;
+		}
+
+	</style>
+	
+	
+	<!--顶部导航栏模块交互-->
+	<script>
+		$(document).ready(function(){
+			$(".myGoodsMenu").mouseenter(function(){
+				$(".myGoods").animate({
+					height:'toggle'
+				});
+			});
+
+			$(".myGoodsMenu").mouseleave(function(){
+				$(".myGoods").hide();
+			});
+	})
+		$(document).ready(function(){
+			$(".myFavoriteMenu").mouseenter(function(){
+				$(".myFavorite").animate({
+					height:'toggle'
+				});
+			});	
+
+			$(".myFavoriteMenu").mouseleave(function(){
+				$(".myFavorite").hide();
+			});
+	})
+	</script>
+	
+	<script>
+	$(document).ready(function(){
+			$(".more").click(function(){
+				$(".line2").toggle(10);
+				$(this).replace("更多","收起");
+			});
+	})
+	</script>
+	
+	
+	<!--顶部搜索栏样式-->
+	<style>
+		@media screen and (min-width: 1200px){
+			.mainSearch{
+				max-width: 1200px;
+				margin: auto;
+			}
+		}
+		.mainSearch{
+			min-width: 1000px;
+		}
+		.mainSearch img{
+			width: 200px;
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+		.searchBox{
+			background-color: #66CCFF;
+			width: 400px;
+			height: 40px;
+			padding: 2px;
+			margin: -65px 400px;
+			display: block;
+		}
+		.searchBox input{
+			width: 275px;
+			height: 36px;
+			border: 1px solid transparent;
+			outline: none;
+		}
+		.searchBox button{
+			width: 110px;
+			border: 1px solid transparent;
+			background-color: #66CCFF;
+			color: white;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.hotSearch{
+			font-family: Arial;
+			margin-top: 5px;
+			margin-left: -20px;
+		}
+		.hotSearch a{
+			font-size: 14px;
+			padding:0 20px;
+			color: #999999;
+			text-decoration: none;
+		}
+		.hotSearch a:hover{
+			color: #66CCFF;
+		}
+		.hotSearch span{
+			color: #999999;
+		}
+	</style>
+	
+	
+	<!--产品图片信息模块样式-->
+	<style>
+		@media screen and (min-width: 1200px){
+			.imgAndInfo{
+				width: 1200px;
+				height: 500px;
+				margin: 100px auto 10px auto;
+			}
+		}
+		.imgAndInfo{
+			min-width: 1200px;
+			height: 500px;
+			margin: 100px auto 10px auto;
+		}
+		.img{
+			float: left;
+		}
+		.info{
+			width: 60%;
+			float: right;
+		}
+		
+	</style>
+	
+	<!--产品图片样式-->
+	<style>
+		div.img{
+			margin: 40px 20px;
+		}
+		div.bigImgDiv{
+			width: 400px;
+			float: left;
+		}
+		div.img img.bigImg{
+			width: 400px;
+			height: 400px;
+			padding: 20px;
+			border: 2px solid #F2F2F2;
+		}
+		div.img div.smallImageDiv{
+			width: 80%;
+			margin: 20px auto;
+		}
+		div.img img.smallImage{
+			width: 60px;
+			height: 60px;
+			border: 2px solid white;
+		}
+		div.img img.smallImage:hover{
+			border: 2px solid #66CCFF;
+		}
+	</style>
+
+	<!--产品图片交互-->
+	<script>
+	$(function(){
+		$("img.smallImage").mouseenter(function(){
+			var src = $(this).attr("src");
+			$("img.bigImg").attr("src",src);
+		});
+		$("img.bigImg").load(
+			function(){
+				$("img.smallImage").each(function(){
+					var src = $(this).attr("src");
+					img = new Image();
+					img.src = src;
+					img.onload = function(){
+						console.log(src);   
+						$("div.img4load").append($(img));
+					};
+				});     
+			}
+		);
+
+	});
+	</script>
+	
+	
+	<!--产品信息样式-->
+	<style>
+		div.info{
+			margin: 40px 20px;
+		}
+		div.imgInimgAndInfo{
+			width: 100px;
+			float: left;
+		}
+		div.infoDiv{
+			padding: 0px 20px;
+			overflow: hidden;
+		}
+		div.infoDiv div.productTitle{
+			color: black;
+			font-size: 16px;
+			font-weight: bold;
+			margin: 0px 10px;
+		}
+		div.infoDiv div.productSubTitle{
+			color: #00E3E3;
+			font-size: 12px;
+			margin: 0px 10px;
+		}
+		div.infoDiv div.discount{
+			background-color: #ACD6DD;
+			color:aliceblue;
+			text-align: center;
+			line-height: 40px;
+			margin-top: 10px;
+		}
+		div.infoDiv span.discountDouble7{
+			font-size: 18px;
+			font-weight: bold;
+			font-family: 黑体;
+		}
+		div.infoDiv div.productPriceDiv{
+			background-image:url(http://how2j.cn/tmall/img/site/priceBackground.png);
+			height: 102px;
+			padding: 10px;
+			color: #666666;
+		}
+		div.infoDiv div.gouwujuanDiv{
+			margin-top: 5px;
+		}
+		div.infoDiv div.originalDiv{
+			margin-top: 5px;
+		}
+		div.infoDiv span.originalPriceDesc{
+			color: #999999;
+			display: inline-block;
+			width: 68px;
+		}
+		div.infoDiv span.originalPrice{
+			font-family: Arial;
+			font-size: 12px;
+			color: #333333;
+			text-decoration: line-through;
+		}
+		div.infoDiv span.promotionPriceYuan{
+			font-family: Arial;
+			font-size: 18px;
+			color: #66CCFF;
+		}
+		div.infoDiv span.promotionPrice{
+			color: #66CCFF;
+			font-family: Arial;
+			font-size: 30px;
+			font-weight: bold;
+		}
+		div.infoDiv span.promotionPriceDesc{
+			color: #999999;
+			display: inline-block;
+			width: 68px;
+			position: relative;
+			left: 0px;
+			top: -10px;
+		}
+		div.infoDiv div.productSaleAndReviewNumber{
+			margin: 20px 0px;
+			border-top-style: dotted;
+			border-top-color: #C9C9C9;
+			border-top-width: 1px;
+			border-bottom-style: dotted;
+			border-bottom-color: #C9C9C9;
+			border-bottom-width: 1px;
+			padding: 10px;
+		}
+		div.infoDiv div.productSaleAndReviewNumber div{
+			display: inline-block;
+			width: 49%;
+			text-align: center;
+			color: #999999;
+			font-size: 12px;
+		}
+		div.infoDiv div.productSaleAndReviewNumber div:first-child{
+			border-right-width: 1px;
+			border-right-style: solid;
+			border-right-color: #E5DFDA;
+		}
+		div.infoDiv div.productNumber{
+			color: #999999;
+		}
+		div.infoDiv span.productNumberSettingSpan{
+			border: 1px solid #999;
+			display: inline-block;
+			width: 43px;
+			height: 32px;
+			padding-top:7px;
+		}
+		div.infoDiv input.productNumberSetting{
+			border: 0px;
+			height: 80%;
+			width: 80%;
+		}
+		div.productNumber span.updown img{
+			display:inline-block;
+			vertical-align:top;
+		}
+		div.productNumber span.updown{
+			border: 1px solid #999;
+			display: block;
+			width: 20px;
+			height: 14px;
+			text-align: center;
+			padding-top:4px;
+		}
+		div.productNumber span.updownMiddle{
+			height: 4px;
+			display: block;
+		}
+		div.productNumber span.arrow{
+			display: inline-block;
+			width: 22px;
+			height: 32px;
+			vertical-align:top;
+		}
+		div.serviceCommitment{
+			margin: 20px 0px;
+		}
+		div.infoDiv span.serviceCommitmentDesc{
+			color: #999999;
+		}
+		div.infoDiv span.serviceCommitmentLink a{
+			color: #666666;
+		}
+		div.buyDiv{
+			margin: 20px auto;
+			text-align: center;
+		}
+		div.buyDiv button{
+			display: inline-block;
+			margin: 0px 10px;
+			width: 180px;
+			height: 40px;
+		}
+		button.buyButton{
+			border: 1px solid #66CCFF;
+			background-color:azure;
+			text-align: center;
+			line-height: 40px;
+			font-size: 16px;
+			color: #66CCFF;
+			font-family: arial;
+		}
+		button.addCartButton{
+			border: 1px solid #66CCFF;
+			background-color: #66CCFF;
+			text-align: center;
+			line-height: 40px;
+			font-size: 16px;
+			color: white;
+			font-family: arial;
+		}
+		button.addCartButton span.glyphicon{
+			font-size: 12px;
+			margin-right: 8px;
+		}
+		a:hover{
+			text-decoration:none;
+		}
+		.redColor{
+			color: #66CCFF;
+		}
+		.boldWord{
+			font-weight: bold;
+		}
+	</style>
+	
+	<!--产品信息交互-->
+	<script>
+		$(function(){
+			var stock = 30;
+			$(".productNumberSetting").keyup(function(){
+				var num= $(".productNumberSetting").val();
+				num = parseInt(num);
+				if(isNaN(num))
+					num= 1;
+				if(num<=0)
+					num = 1;
+				if(num>stock)
+					num = stock;
+				$(".productNumberSetting").val(num);
+			});
+
+			$(".increaseNumber").click(function(){
+				var num= $(".productNumberSetting").val();
+				num++;
+				if(num>stock)
+					num = stock;
+				$(".productNumberSetting").val(num);
+			});
+			$(".decreaseNumber").click(function(){
+				var num= $(".productNumberSetting").val();
+				--num;
+				if(num<=0)
+					num=1;
+				$(".productNumberSetting").val(num);
+			});
+
+		});
+	</script>
+	
+	
+	<!--产品详情模块样式-->
+	<style>
+		@media screen and (min-width: 1000px){
+			.productDetailDiv{
+				width: 1000px;
+				margin: 80px auto;
+				position: relative
+			}
+		}
+		div.productDetailDiv{
+			min-width: 1000px;
+			margin: 80px auto;
+		}
+		div.productDetailTopPart{
+			border: 1px solid #DFDFDF;
+			border-left-width: 0px;
+		}
+		a.selected{
+			border-left: 1px solid #97CBFF;
+			border-right: 1px solid #97CBFF;
+			color: #66CCFF;
+			display: inline-block;
+			font-weight: bold;
+			line-height: 46px;
+			width: 90px;
+			text-align: center;
+			position: relative;
+		}
+		a.selected:before{
+			content:"";
+			display: block;
+			border-width: 1px;
+			border-color: #66CCFF;
+			border-style: solid;
+			width: 90px;
+			height: 0;
+			position: absolute;
+			top: -1px;
+			margin-left: -1px;
+		}
+		a.selected:after{
+			content: "";
+			display: block;
+			border-color: #66CCFF transparent transparent;
+			border-style: solid;
+			border-width: 5px;
+			width: 0;
+			height: 0;
+			position: absolute;
+			top: -1px;
+			left: 50%;
+			margin-left: -5px;
+		}
+		a.productDetailTopReviewLink{
+			padding: 0px 20px;
+			border-right: 1px dotted #D2D2D2;
+			color: #333333;
+		}
+		span.productDetailTopReviewLinkNumber{
+			color: #3355B9;
+		}
+		div.productParamterPart{
+			border: 1px solid #DFDFDF;
+			padding: 40px;
+		}
+		div.productParamter{
+			color: #999999;
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+		div.productParamterList span{
+			display: block;
+			width: 220px;
+			float: left;
+			padding: 8px 0px;
+			color: #666666;
+		}
+		a:hover{
+			text-decoration:none;
+			color: #66CCFF;
+		}
+	</style>
+	
+	
+	<!--产品评价模块样式-->
+	<style>
+		@media screen and (min-width: 1000px){
+			.productReviewDiv{
+				width: 1000px;
+				margin: 80px auto;
+				position: relative
+			}
+		}
+		div.productReviewDiv{
+			width: 1000px;
+			margin: 80px auto;
+		}
+		div.productReviewTopPart{
+			border: 1px solid #DFDFDF;
+		}
+		a.productReviewTopPartSelectedLink{
+			padding: 0px 20px;
+			color: #333333;
+		}
+		a.selected{
+			border-left: 1px solid #cfbfb1;
+			border-right: 1px solid #cfbfb1;
+			color: #4DFFFF;
+			display: inline-block;
+			font-weight: bold;
+			line-height: 46px;
+			width: 90px;
+			text-align: center;
+			position: relative;
+		}
+		a.selected:before{
+			content: "";
+			display: block;
+			border-width: 1px;
+			border-style: solid;
+			border-color: #4DFFFF;
+			width: 90px;
+			height: 0;
+			position: absolute;
+			top: -1px;
+			margin-left: -1px;
+		}
+		a.selected:after{
+			content: "";
+			display: block;
+			border-color: #4DFFFF transparent transparent;
+			border-style: solid;
+			border-width: 5px;
+			width: 0;
+			height: 0;
+			position: absolute;
+			top: -1px;
+			left: 50%;
+			margin-left: -5px;
+		}
+		div.productReviewContentPart{
+			padding-top: 50px;
+		}
+		div.productReviewItem{
+			border-bottom: 1px solid #E3E3E3;
+			margin: 10px 0px;
+		}
+		div.productReviewItem div.productReviewItemDesc{
+			width: 80%;
+			display: inline-block;
+			color: #333333;
+			margin: 5px 20px;
+			float: left;
+		}
+		div.productReviewItemDate{
+			margin: 15px 0px 0px 0px;
+			color: #CCCCCC;
+		}
+		div.productReviewItem div.productReviewItemUserInfo{
+			color: #404040;
+			margin: 5px 20px;
+			padding: 20px 0;
+		}
+		span.userInfoGrayPart{
+			color: #999999;
+		}
+		a:hover{
+			color:#66CCFF;
+			text-decoration:none;
+		}
+	</style>
+		
+	
+	<!--产品详情评价模块交互-->
+	<script>
+		$(function(){
+			$("div.productReviewDiv").hide();
+			$("a.productDetailTopReviewLink").click(function(){
+				$("div.productReviewDiv").show();
+				$("div.productDetailDiv").hide();
+			});
+			$("a.productReviewTopPartSelectedLink").click(function(){
+				$("div.productReviewDiv").hide();
+				$("div.productDetailDiv").show();       
+			});
+		})
+	</script>
+	
+	
+	<!--页脚模块样式-->
+	<style>
+		@media screen and (min-width: 1200px){
+			.footer{
+				width: 1200px;
+			}
+			.footer1{
+				width: 1200px;
+				margin: auto;
+			}
+			.footer2{
+				width: 1200px;
+				margin: auto;
+			}
+		}
+		.footer1{
+			margin: 30px auto;
+			padding: 0 30px;
+			min-width: 1000px;
+		}
+		.footericon{
+			font-size: 50px;
+			color: #66CCFF;
+		}
+		.footer1Block{
+			display: inline-block;
+		}
+		.footer1Header{
+			font-size: 16px;
+			font-weight: bold;
+			padding: 5px 20px;
+		}
+		.footer1Text{
+			color: #8B8B8B;
+			font-size: 14px;
+			padding:5px 10px 10px 20px;
+		}
+		.footer1Top>div{
+			align-content: center;
+			width: 25%;
+			float: left;
+		}
+		.footer1Top{
+			position: relative;
+			padding-top: 10px;
+			height: 100px;
+			border-bottom: 1px solid #999;
+		}
+		
+		.footer1Bottom>div{
+			float: left;
+			align-content: center;
+			width: 20%;
+		}
+		.footer1Bottom a{
+			width: 60px;
+			color: #8B8B8B;
+			display:block;
+			text-decoration: none;
+		}
+		.footer1 p{
+			margin: 30px auto 5px auto;
+			font-size: 16px;
+			font-weight:bold;
+		}
+		.footer1Bottom{
+			position: relative;
+			height: 200px;
+		}
+		.footer1Bgc{
+			border-top: 1px solid #999;
+			margin-top: -360px;
+			height: 330px;
+		}
+		.footer2Bgc{
+			margin-top: -92px;
+			width: 100%;
+			height: 200px;
+			border-top: 1px solid #66CCFF;
+			background-color: black;
+		}
+		.footer2{
+			min-width: 1000px
+		}
+		.line1{
+			margin: 20px auto 10px auto;
+		}
+		.line1 span{
+			color: black;
+		}
+		.line1 a{
+			padding: 0 5px;
+			text-decoration: none;
+			color: white
+		}
+		.line2{
+			color: #A4A4A4;
+			margin: 10px auto;
+		}
+		.line2 a{
+			color: #A4A4A4;
+			text-decoration: none;
+		}
+		.line2 div{
+			display: inline;
+			padding: 0 5px;
+		}
+		.line3 a {
+			color: #A4A4A4;
+			text-decoration: none;
+			padding: 0 5px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<!--顶部导航条模块-->
+	<nav class="topNav">
+		<div class="topNavText">
+			<span class="leftTopNav">汪，欢迎来到天狗商城！</span>
+			<a href="logIn.html">请登录</a>
+			<a href="register.html">免费注册</a>
+			<span class="rightTopNav pull-right">
+				<div class="myGoodsMenu"><a href="#个人菜单">我的宝贝<span class="ui-icon ui-icon-triangle-1-s"></span></a>
+					<div class="myGoods" style="position:absolute; display: none">
+						<a href="#here">已买到的宝贝</a>
+						<a href="#here">已卖出的宝贝</a>
+					</div>
+				</div>
+				
+				<div><a href="#我喜欢的宝贝"><span class="ui-icon ui-icon-heart"></span> 我关注的品牌</a></div>
+				<div><a href="#购物车"><span class="iconfont icon-gouwuche topNavBlue"></span>购物车<strong>0</strong>件</a></div>
+				<div  class="myFavoriteMenu"><a href="#我喜欢的宝贝">收藏夹<span class="ui-icon ui-icon-triangle-1-s"></span></a>
+					<div class="myFavorite" style="position:absolute; display: none">
+						<a href="#here">收藏的宝贝</a>
+						<a href="#here">收藏的店铺</a>
+					</div>
+				</div>
+				
+			</span>
+		</div>
+	</nav>
+
+
+	<!--顶部搜索栏模块-->
+	<div class="mainSearch">
+			<a href="{{url_for("show_index")}}"><img src="{{url_for('static', filename='Pictures/logo.jpg')}}"></a>
+		<div class="searchBox">
+			<input type="text" placeholder="如何干死猫？">
+			<button class="searchBtn" type="submit" onclick="window.open('productList.html')">天狗GO</button>
+			<div class="hotSearch">
+				<span> 
+					<a href="#"> 二手东 </a> 
+					<span>|</span>
+				</span> 
+				<span> 
+					<a href="#"> 假货宝 </a> 
+					<span>|</span>
+				</span> 
+				<span> 
+					<a href="#"> 要网购 </a> 
+					<span>|</span>
+				</span>
+				<span> 
+					<a href="#"> 来天狗 </a>
+				</span>	
+			</div>
+		</div>
+	</div>
+	
+	
+	<!--产品图片信息模块-->
+	<div class="imgAndInfo">
+		<!--产品图片-->
+		<div class="img">
+			<div class="bigImgDiv">
+				<img  width="100px" class="bigImg" src="{{url_for('static',filename='Pictures/大天狗抱枕001.jpg')}}">
+				<div class="smallImageDiv">
+					<img  width="56px" class="smallImage" src="{{url_for('static',filename='Pictures/大天狗抱枕001.jpg')}}">
+					<img  width="56px" class="smallImage" src="{{url_for('static',filename='Pictures/大天狗抱枕002.jpg')}}">
+					<img  width="56px" class="smallImage" src="{{url_for('static',filename='Pictures/大天狗抱枕003.jpg')}}">
+					<img  width="56px" class="smallImage" src="{{url_for('static',filename='Pictures/大天狗抱枕004.jpg')}}">
+					<img  width="56px" class="smallImage" src="{{url_for('static',filename='Pictures/大天狗抱枕005.jpg')}}">
+				</div>
+			</div>
+			<div style="clear:both"></div>
+		</div>
+		
+		<!--产品信息-->
+		<div class="info">
+			<div class="infoDiv">
+				<div class="productTitle">
+					天狗商城七夕钜惠 大天狗方形抱枕/靠垫
+				</div>
+				<div class="productSubTitle">
+					高端定制 高档棉麻 现货即发 加购物车  
+				</div>
+				<div class="productActivity">
+					<div class="discount">
+						<span class="discountDouble7">七夕钜惠</span>
+						<span>此商品享受七夕活动折扣</span>
+					</div>
+					<div class="productPriceDiv">
+						<div class="originalDiv">
+							<span class="originalPriceDesc">原价</span>
+							<span class="originalPriceYuan">¥</span>
+							<span class="originalPrice">39.00</span>
+						</div>
+						<div class="promotionDiv">
+							<span class="promotionPriceDesc">促销价 </span>
+							<span class="promotionPriceYuan">¥</span>
+							<span class="promotionPrice">37.05</span>               
+						</div>
+					</div>
+				</div>
+				<div class="productSaleAndReviewNumber">
+					<div>销量 <span class="blueColor boldWord"> 3</span></div>    
+					<div>累计评价 <span class="blueColor boldWord"> 1</span></div>  
+				</div>
+				<div class="productNumber">
+					<span>数量</span>
+					<span>
+						<span class="productNumberSettingSpan">
+						<input type="text" value="1" class="productNumberSetting">
+						</span>
+						<span class="arrow">
+							<a class="increaseNumber" href="#nowhere">
+							<span class="updown">
+							   <img src="http://how2j.cn/tmall/img/site/increase.png">
+							</span>
+							</a>
+							<span class="updownMiddle"> </span>
+							<a class="decreaseNumber" href="#nowhere">
+							<span class="updown">
+								<img src="http://how2j.cn/tmall/img/site/decrease.png">
+							</span>
+							</a>
+						</span>件</span>
+					<span>库存30件</span>
+				</div>
+				<div class="serviceCommitment">
+					<span class="serviceCommitmentDesc">服务承诺</span>
+					<span class="serviceCommitmentLink">
+						<a href="#nowhere">正品保证</a>
+						<a href="#nowhere">极速退款</a>
+						<a href="#nowhere">赠运费险</a>
+						<a href="#nowhere">七天无理由退换</a>
+					</span>
+				</div>    
+				<div class="buyDiv">
+					<a href="#nowhere" class="buyLink"><button class="buyButton">立即购买</button></a>
+					<a class="addCartLink" href="#nowhere"><button class="addCartButton"><span class="glyphicon glyphicon-shopping-cart"></span>加入购物车</button></a>
+				</div>
+			</div>
+			<div style="clear:both"></div>
+		</div>
+	</div>
+
+
+	<!--产品详情模块-->
+	<div class="productDetailDiv" style="display: block;">
+		<div class="productDetailTopPart">
+			<a class="productDetailTopPartSelectedLink selected" href="#nowhere">商品详情</a>
+			<a class="productDetailTopReviewLink" href="#nowhere">累计评价 <span class="productDetailTopReviewLinkNumber">1</span> </a>
+		</div>
+		<div class="productParamterPart">
+			<div class="productParamter">产品参数：</div>
+			<div class="productParamterList">
+					<span>产品名:  大天狗抱枕/靠垫 </span>
+					<span>品牌:  天狗商城自营 </span>
+					<span>材质:  毛绒 </span>
+					<span>尺码:  40cm*40cm </span>
+					<span>出售状态:  定制 </span>
+					<span>颜色分类:  白色 </span>
+					<span>适用年龄:  6周岁以上 </span>
+			</div>
+			<div style="clear:both"></div>
+		</div>
+	</div>
+	
+	
+	<!--产品评价模块-->
+	<div class="productPageDiv">
+		<div class="productReviewDiv" style="display: block;">
+			<div class="productReviewTopPart">
+				<a class="productReviewTopPartSelectedLink" href="#nowhere">商品详情</a>
+				<a class="selected" href="#nowhere">累计评价 <span class="productReviewTopReviewLinkNumber">1</span> </a>
+			</div>
+			<div class="productReviewContentPart">
+				<div class="productReviewItem">
+					<div class="productReviewItemDesc">
+						<div class="productReviewItemContent">
+							不错的购物，包装很精细，布料也不错舒服，因为之前一直购买品牌装，很好的一次网购。
+						</div>
+						<div class="productReviewItemDate">2017-08-25</div>
+					</div>
+					<div class="productReviewItemUserInfo">
+						哀****莉<span class="userInfoGrayPart">（匿名）</span>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+		
+		<!--页脚模块-->
+	<div>
+		<div class="footer1">
+			<div class="footer1Top">
+				<div>
+					<span class="footericon iconfont icon-icon"></span>
+					<div class="footer1Block">
+						<div class="footer1Header">品质保障</div>
+						<div class="footer1Text">品质护航 购物无忧</div>
+					</div>
+				</div>
+				<div>
+					<span class="footericon iconfont icon-qitiantuihuo"></span>
+					<div class="footer1Block">
+						<div class="footer1Header">七天无理由退换货</div>
+						<div class="footer1Text">为您提供售后无忧保障</div>
+					</div>
+				</div>
+				<div>
+					<span class="footericon iconfont icon-icon1460191793239"></span>
+					<div class="footer1Block">
+						<div class="footer1Header">特色服务体验</div>
+						<div class="footer1Text">为您呈现不一样的服务</div>
+					</div>
+				</div>
+				<div>
+					<span class="footericon iconfont icon-bangzhu"></span>
+					<div class="footer1Block">
+						<div class="footer1Header">帮助中心</div>
+						<div class="footer1Text">您的购物指南</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer1Bottom">
+				<div>
+					<p>购物指南</p>
+					<a href="#here">免费注册</a>
+					<a href="#here">关联银行卡</a>
+				</div>
+				<div>
+					<p>天狗保障</p>
+					<a href="#here">发票保障</a>
+					<a href="#here">售后规则</a>
+					<a href="#here">缺货赔付</a>
+				</div>
+				<div>
+					<p>支付方式</p>
+					<a href="#here">快捷支付</a>
+					<a href="#here">信用卡</a>
+					<a href="#here">货到付款</a>
+				</div>
+				<div>
+					<p>商家服务</p>
+					<a href="#here">商家入驻</a>
+					<a href="#here">商家中心</a>
+					<a href="#here">天狗智库</a>
+					<a href="#here">天狗规则</a>
+					<a href="#here">物流服务</a>
+					<a href="#here">运营服务</a>
+				</div>
+				<div>
+					<p>手机天狗</p>
+					<a>敬请期待</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer1Bgc"></div>
+		<div class="footer2">
+			<div class="line1">
+				<a href="#here">关于天狗</a>
+				<a href="#here">帮助中心</a>
+				<a href="#here">开放平台</a>
+				<a href="#here">诚聘英才</a>
+				<a href="#here">联系我们<span>我们也不会回复</span></a>
+				<a href="#here">网站合作</a>
+				<a href="#here">法律声明及隐私权政策</a>
+				<a href="#here"><del>知识产权</del><span>这种东西我们没有</span></a>
+				<a href="#here">廉政举报</a>
+				<a href="#here">规则意见征集<span>我们也不会听</span></a>
+			</div>
+			<div class="line2">
+				<div>增值电信业务经营许可证：<a href="#here"> 浙B2-20110446</a></div>
+				<div>网络文化经营许可证：<a href="#here">浙网文[2015]0295-065号</a></div>
+				<div><a href="#here">12318举报</a></div>
+			</div>
+			<div class="line3">
+				<a href="#here">©2017-2017天狗网版权所有</a>
+			</div>
+		</div>
+		<div class="footer2Bgc"></div>
+	</div>
+	
+	
+
+</body>
+</html>

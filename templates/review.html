@@ -1,0 +1,683 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>购买成功！欢迎再来~</title>
+<!-- <script src="Bootstrap/jquery-3.2.1.min.js"></script>
+<link href="Bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="Bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="icon/font_we0rc7skyj9bpgb9/iconfont.css">
+<link rel="stylesheet" type="text/css" href="icon/font_购买成功/font_g9j29hoqr58nnrk9/iconfont.css"> -->
+
+
+<script type="text/javascript" src="{{
+  url_for('static', filename='Bootstrap/jquery-3.2.1.min.js') }}"></script>
+<!-- <script src="Bootstrap/jquery-3.2.1.min.js"></script> -->
+<link type="text/css" href="{{
+  url_for('static', filename='Bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css') }}" rel="stylesheet">
+<!-- <link href="Bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet"> -->
+<script type="text/javascript" src="{{
+  url_for('static', filename='Bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js') }}"></script>
+<!-- <script src="Bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script> -->
+<link type="text/css" href="{{
+  url_for('static', filename='icon/font_we0rc7skyj9bpgb9/iconfont.css') }}" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="icon/font_we0rc7skyj9bpgb9/iconfont.css"> -->
+<link type="text/css" href="{{
+  url_for('static', filename='icon/font_购买成功/font_g9j29hoqr58nnrk9/iconfont.css') }}" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="icon/font_购买成功/font_g9j29hoqr58nnrk9/
+iconfont.css"> -->
+<link type="text/css" href="{{
+  url_for('static', filename='jQuery/jquery-ui-1.12.1.custom/jquery-ui.css') }}" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="jQuery/jquery-ui-1.12.1.custom/jquery-ui.css"> -->
+	<style>
+		body{
+			margin: 0;
+		}
+	</style>
+	
+	<!--顶部导航条模块样式-->
+	<style>
+		@media screen and (min-width: 1200px){
+			.topNavText{
+				max-width: 1200px;
+				margin: auto;
+			}
+			.myGoods{
+				max-width: 1200px;
+			}
+		} 
+		body{
+			font-size: 12px;
+			font-family: Arial;
+		}
+		.topNav {
+			display: block;
+			clear: both;
+			background-color: #F2F2F2;
+			width: 100%;
+			min-width: 1000px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 12px;	
+			font-family: Arial;
+			border-bottom: 1px solid #E7E7E7;
+			color: #999999;
+		}
+		.topNav .topNavBlue{
+				color: #66CCFF;
+			}
+		.topNavText a{
+			text-decoration: none;
+			color: #999999;
+			margin: 0 10px 0 10px;
+		}
+		.leftTopNav{
+			margin: 0 10px 0 10px;
+		}
+		.topNavText a:hover{
+			color: #66ccff;
+			text-decoration: none;
+		}
+		.rightTopNav>div{
+			float: left;
+		}
+		.myGoods,.myFavorite{
+			background-color: white;
+			text-align: center;
+			width: 100px;
+			height: 70px;
+			border: 1px solid #F2F2F2;
+			border-top-color: white;
+		}
+
+	</style>
+	
+	
+	<!--顶部搜索栏样式-->
+	<style>
+		@media screen and (min-width: 1200px){
+			.mainSearch{
+				max-width: 1200px;
+				margin: auto;
+			}
+		}
+		.mainSearch{
+			height: 120px;
+			display: block;
+			clear: both;
+			min-width: 1000px;
+		}
+		.mainSearch img{
+			width: 200px;
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+		.searchBox{
+			background-color: #66CCFF;
+			width: 400px;
+			height: 40px;
+			padding: 2px;
+			margin: -65px 400px;
+			display: block;
+		}
+		.searchBox input{
+			width: 275px;
+			height: 36px;
+			border: 1px solid transparent;
+			outline: none;
+		}
+		.searchBox button{
+			width: 110px;
+			border: 1px solid transparent;
+			background-color: #66CCFF;
+			color: white;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.hotSearch{
+			font-family: Arial;
+			margin-top: 5px;
+			margin-left: -20px;
+		}
+		.hotSearch a{
+			font-size: 14px;
+			padding:0 20px;
+			color: #999999;
+			text-decoration: none;
+		}
+		.hotSearch a:hover{
+			color: #66CCFF;
+		}
+		.hotSearch span{
+			color: #999999;
+		}
+	</style>
+	
+	
+	<!--付款成功模块样式-->
+	<style>
+		@media screen and (min-width: 1200px){
+			.payedDiv{
+				width: 1000px;
+				margin: 10px auto 20px auto;
+			}
+		}
+		div.payedDiv{
+			border: 1px solid #BBBBBB;
+			width: 1000px;
+			margin: 10px auto 20px auto;
+			border-radius: 5px;
+		}
+		div.payedTextDiv{
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			height: 80px;
+			background-color:azure;
+			padding: 17px 0px 0px 25px;
+		}
+		div.payedTextDiv span{
+			font-weight: bold;
+			font-size: 14px;
+			margin-left: 10px;
+		}
+		div.warningDiv{
+			margin: 23px 45px;
+			color:black;
+		}
+		body{
+			font-size: 12px;
+			font-family: Arial;
+		}
+		.boldWord{
+			font-weight: bold;
+		}
+		.redColor{
+			color: #C40000;
+		}
+		span.checked{
+			font-size: 20px !important;
+			color: #228800;
+		}
+		span.warning{
+			font-size: 18px !important;
+			color: #66ccff;
+		}
+	</style>
+
+
+	<!--评价模块样式-->
+	<style>
+		@media screen and (min-width:1200px){
+			.productInfo{
+				margin: 20px auto;
+				width: 800px;
+			}
+			.reviewDiv{
+				margin: 10px auto 50px auto;
+				width: 800px;
+			}
+		}
+		div.productInfo{
+			border: 1px solid #BBBBBB;
+			border-radius:5px;
+			padding: 20px 30px;
+		}
+		img.productImg{
+			width: 60px;
+			height: 60px;
+		}
+		span.productName{
+			margin: 0 50px;
+			font-family: Arial;
+			font-weight: bold;
+			font-size: 12px;
+		}
+		div.reviewDiv{
+			width: 800px;
+			margin: 10px auto 50px auto;
+		}
+		div.makeReviewDiv{
+			border: 1px solid #BBBBBB;
+			margin: 20px 0px;
+			background-color:azure;
+			border-radius: 5px;
+		}
+		div.makeReviewText{
+			font-size: 16px;
+			color: #333333;
+			font-weight: bold;
+			margin: 20px 40px;
+		}
+		table.makeReviewTable{
+			margin: 20px 40px;
+			font-size: 12px;
+		}
+		table.makeReviewTable td{
+			border: 1px solid #E7E7E7;
+			padding: 10px;
+			background-color: white;
+		}
+		table.makeReviewTable textarea{
+			border-width: 0px;
+			resize: none;
+			width: 420px;
+			height: 120px;
+		}
+		td.makeReviewTableFirstTD{
+			background-color: #F6F6F6;
+		}
+		div.makeReviewButtonDiv{
+			background-color: white;
+			text-align: center;
+			padding: 15px;
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+		div.makeReviewButtonDiv button{
+			width: 72px;
+			height: 34px;
+			border-radius: 2px;
+			background-color: #66CCFF;
+			color: white;
+			border-width: 0px;
+			font-weight: bold;
+			border-radius: 2px;
+		}
+	</style>
+	
+	
+	<!--页脚模块样式-->
+	<style>
+		@media screen and (min-width: 1200px){
+			.footer1{
+				width: 1200px;
+				margin: 30px auto;
+			}
+			.footer2{
+				width: 1200px;
+				margin: auto;
+			}
+		}
+		.footer{
+			display: block;
+			clear: both;
+			width: 100%;
+		}
+		.footer1{
+			margin: 30px auto;
+			padding: 0 30px;
+			min-width: 1000px;
+		}
+		.footericon{
+			font-size: 50px;
+			color: #66CCFF;
+		}
+		.footer1Block{
+			display: inline-block;
+		}
+		.footer1Header{
+			font-size: 16px;
+			font-weight: bold;
+			padding: 5px 20px;
+		}
+		.footer1Text{
+			color: #8B8B8B;
+			font-size: 14px;
+			padding:5px 10px 10px 20px;
+		}
+		.footer1Top>div{
+			align-content: center;
+			width: 25%;
+			float: left;
+		}
+		.footer1Top{
+			position: relative;
+			padding-top: 10px;
+			height: 100px;
+			border-bottom: 1px solid #999;
+		}
+		
+		.footer1Bottom>div{
+			float: left;
+			align-content: center;
+			width: 20%;
+		}
+		.footer1Bottom a{
+			width: 60px;
+			color: #8B8B8B;
+			display:block;
+			text-decoration: none;
+		}
+		.footer1 p{
+			margin: 30px auto 5px auto;
+			font-size: 16px;
+			font-weight:bold;
+		}
+		.footer1Bottom{
+			position: relative;
+			height: 200px;
+		}
+		.footer1Bgc{
+			border-top: 1px solid #999;
+			margin-top: -360px;
+			height: 330px;
+		}
+		.footer2Bgc{
+			margin-top: -92px;
+			width: 100%;
+			height: 200px;
+			border-top: 1px solid #66CCFF;
+			background-color: black;
+		}
+		.footer2{
+			min-width: 1000px
+		}
+		.line1{
+			margin: 20px auto 10px auto;
+		}
+		.line1 span{
+			color: black;
+		}
+		.line1 a{
+			padding: 0 5px;
+			text-decoration: none;
+			color: white
+		}
+		.line2{
+			color: #A4A4A4;
+			margin: 10px auto;
+		}
+		.line2 a{
+			color: #A4A4A4;
+			text-decoration: none;
+		}
+		.line2 div{
+			display: inline;
+			padding: 0 5px;
+		}
+		.line3 a {
+			color: #A4A4A4;
+			text-decoration: none;
+			padding: 0 5px;
+		}
+	</style>
+	
+	
+	<!--顶部导航栏模块交互-->
+	<script>
+		$(document).ready(function(){
+			$(".myGoodsMenu").mouseenter(function(){
+				$(".myGoods").animate({
+					height:'toggle'
+				});
+			});
+
+			$(".myGoodsMenu").mouseleave(function(){
+				$(".myGoods").hide();
+			});
+	})
+		$(document).ready(function(){
+			$(".myFavoriteMenu").mouseenter(function(){
+				$(".myFavorite").animate({
+					height:'toggle'
+				});
+			});	
+
+			$(".myFavoriteMenu").mouseleave(function(){
+				$(".myFavorite").hide();
+			});
+	})
+	</script>
+	
+	
+	<script>
+	$(document).ready(function(){
+			$(".more").click(function(){
+				$(".line2").toggle(10);
+				$(this).replace("更多","收起");
+			});
+	})
+	</script>
+	
+	
+</head>
+
+<body>
+	<!--顶部导航条模块-->
+	<nav class="topNav">
+		<div class="topNavText">
+			<span class="leftTopNav">汪，欢迎来到天狗商城！</span>
+			<a id="if_loggedin"></a>
+			<a id="log_out" href="{{url_for('logout')}}">注销</a>
+			<a id="register" href="{{url_for('register')}}">注册</a>
+			<script type="text/javascript">
+				var data = {{ usr_info|tojson }};
+				var JSONObject = JSON.parse(data);
+				var ui_logout = document.getElementById("log_out")
+				var ui_login = document.getElementById("if_loggedin")
+				var ui_register = document.getElementById("register")
+				if(JSONObject['usrname']=='not_logged_in'){
+					ui_logout.style.display="none";
+					ui_login.innerHTML = "请登录";
+					ui_login.href = "{{url_for('logIn')}}";
+				}
+				else{
+					ui_login.innerHTML = JSONObject['usrname'];
+					ui_register.style.display="none";
+				}
+			</script>
+			<span class="rightTopNav pull-right">
+				<div class="myGoodsMenu"><a href="#个人菜单">我的宝贝<span class="ui-icon ui-icon-triangle-1-s"></span></a>
+					<div class="myGoods" style="position:absolute; display: none">
+						<a href="#here">已买到的宝贝</a>
+						<a href="#here">已卖出的宝贝</a>
+					</div>
+				</div>
+				
+				<div><a href="#我喜欢的宝贝"><span class="ui-icon ui-icon-heart"></span> 我关注的品牌</a></div>
+				<div><a href="#购物车"><span class="iconfont icon-gouwuche topNavBlue"></span>购物车<strong>0</strong>件</a></div>
+				<div  class="myFavoriteMenu"><a href="#我喜欢的宝贝">收藏夹<span class="ui-icon ui-icon-triangle-1-s"></span></a>
+					<div class="myFavorite" style="position:absolute; display: none">
+						<a href="#here">收藏的宝贝</a>
+						<a href="#here">收藏的店铺</a>
+					</div>
+				</div>
+				
+			</span>
+		</div>
+	</nav>
+	
+	
+	<!--顶部搜索栏模块-->
+	<div class="mainSearch">
+		<a href="{{url_for("show_index")}}"><img src="../static/Pictures/logo.jpg"></a>
+		<div class="searchBox">
+			<input type="text" placeholder="如何干死猫？">
+			<button class="searchBtn" type="submit" onclick="window.open('productList.html')">天狗GO</button>
+			<div class="hotSearch">
+				<span> 
+					<a href="#"> 二手东 </a> 
+					<span>|</span>
+				</span> 
+				<span> 
+					<a href="#"> 假货宝 </a> 
+					<span>|</span>
+				</span> 
+				<span> 
+					<a href="#"> 要网购 </a> 
+					<span>|</span>
+				</span>
+				<span> 
+					<a href="#"> 来天狗 </a>
+				</span>	
+			</div>
+		</div>
+	</div>
+	
+	<!--付款成功模块-->
+	<div class="payedDiv">
+  	 	<div class="payedTextDiv">
+		  	<span class="checked iconfont icon-checked"></span>
+			<span>您已成功付款<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您购买的productName将在几天后送至您的家中，请耐心等待。</span>
+		</div>
+		<div class="payedSeperateLine"></div>
+		<div class="warningDiv">
+			<span class="warning iconfont icon-jinggao"></span>
+			<b>安全提醒：</b>下单后，<span class="redColor boldWord">用QQ或短信给您发送链接办理退款的都是骗子！</span>因为我们根本就是一个假的电商平台！
+		</div>
+	</div>
+	
+	
+	<!--评价模块-->
+	<div class="reviewDiv">    
+       	<div class="productInfo">
+       		<img id="img0" class="productImg">
+       		<span id="name" class="productName">productName</span>
+       	</div>
+       	<div class="makeReviewDiv">
+			<form method="post" action="{{url_for('postReview')}}">
+				<div class="makeReviewText">其他买家，需要你的建议哦！<br/>ps:评价只有这一次机会哦！</div>
+				<table class="makeReviewTable">
+					<tbody><tr>
+						<td class="makeReviewTableFirstTD">评价商品</td>
+						<td><textarea id="content" name="content"></textarea></td>
+						<input type="hidden" name="pname">
+					</tr>
+				</tbody></table>
+				<div class="makeReviewButtonDiv">
+					<input type="hidden" value="952" name="oid">
+					<input type="hidden" value="256" name="pid">
+					<button class="submitReview" type="submit">提交评价</button>
+				</div>
+			</form>
+        </div>    
+	</div>
+	<script type="text/javascript">
+		var data = {{ p|tojson }};
+		var JSONObject = JSON.parse(data);
+		document.getElementById("img0").src = JSONObject['pimg'];
+		document.getElementById("name").innerHTML = JSONObject['pname'];
+		document.getElementsByName("pname").value = JSONObject['pname'];
+
+		function doPost(p) {
+	        var myForm = document.createElement("form");       
+	        myForm.method = 'post';
+	        myForm.action = "{{url_for('postReview')}}";
+
+	        var myInput = document.createElement("input");     
+	        myInput.setAttribute("name", "price");
+	        myInput.setAttribute("value", document.getElementById("price").innerHTML);
+	        myForm.appendChild(myInput);
+
+	        var myInput = document.createElement("input");
+	        myInput.setAttribute("name", "pimg1_path");
+	        myInput.setAttribute("value", p['pimg']);
+	        myForm.appendChild(myInput);
+
+	        var myInput = document.createElement("input");
+	        myInput.setAttribute("name", "pname");
+	        myInput.setAttribute("value", p['pname']);
+	        myForm.appendChild(myInput);
+
+	        document.body.appendChild(myForm);     
+	        myForm.submit();
+	        document.body.removeChild(myForm);  // 提交后移除创建的form  
+		};
+        $('.buybutton').click(function(){
+			doPost(JSONObject);
+		});
+	</script>
+			
+	<!--页脚模块-->
+	<div class="footer" style="display: block;margin: auto">
+		<div class="footer1">
+			<div class="footer1Top">
+				<div>
+					<span class="footericon iconfont icon-icon"></span>
+					<div class="footer1Block">
+						<div class="footer1Header">品质保障</div>
+						<div class="footer1Text">品质护航 购物无忧</div>
+					</div>
+				</div>
+				<div>
+					<span class="footericon iconfont icon-qitiantuihuo"></span>
+					<div class="footer1Block">
+						<div class="footer1Header">七天无理由退换货</div>
+						<div class="footer1Text">为您提供售后无忧保障</div>
+					</div>
+				</div>
+				<div>
+					<span class="footericon iconfont icon-icon1460191793239"></span>
+					<div class="footer1Block">
+						<div class="footer1Header">特色服务体验</div>
+						<div class="footer1Text">为您呈现不一样的服务</div>
+					</div>
+				</div>
+				<div>
+					<span class="footericon iconfont icon-bangzhu"></span>
+					<div class="footer1Block">
+						<div class="footer1Header">帮助中心</div>
+						<div class="footer1Text">您的购物指南</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer1Bottom">
+				<div>
+					<p>购物指南</p>
+					<a href="#here">免费注册</a>
+					<a href="#here">关联银行卡</a>
+				</div>
+				<div>
+					<p>天狗保障</p>
+					<a href="#here">发票保障</a>
+					<a href="#here">售后规则</a>
+					<a href="#here">缺货赔付</a>
+				</div>
+				<div>
+					<p>支付方式</p>
+					<a href="#here">快捷支付</a>
+					<a href="#here">信用卡</a>
+					<a href="#here">货到付款</a>
+				</div>
+				<div>
+					<p>商家服务</p>
+					<a href="#here">商家入驻</a>
+					<a href="#here">商家中心</a>
+					<a href="#here">天狗智库</a>
+					<a href="#here">天狗规则</a>
+					<a href="#here">物流服务</a>
+					<a href="#here">运营服务</a>
+				</div>
+				<div>
+					<p>手机天狗</p>
+					<a>敬请期待</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer1Bgc"></div>
+		<div class="footer2">
+			<div class="line1">
+				<a href="#here">关于天狗</a>
+				<a href="#here">帮助中心</a>
+				<a href="#here">开放平台</a>
+				<a href="#here">诚聘英才</a>
+				<a href="#here">联系我们<span>我们也不会回复</span></a>
+				<a href="#here">网站合作</a>
+				<a href="#here">法律声明及隐私权政策</a>
+				<a href="#here"><del>知识产权</del><span>这种东西我们没有</span></a>
+				<a href="#here">廉政举报</a>
+				<a href="#here">规则意见征集<span>我们也不会听</span></a>
+			</div>
+			<div class="line2">
+				<div>增值电信业务经营许可证：<a href="#here"> 浙B2-20110446</a></div>
+				<div>网络文化经营许可证：<a href="#here">浙网文[2015]0295-065号</a></div>
+				<div><a href="#here">12318举报</a></div>
+			</div>
+			<div class="line3">
+				<a href="#here">©2017-2017天狗网版权所有</a>
+			</div>
+		</div>
+		<div class="footer2Bgc"></div>
+	</div>
+</body>
+</html>

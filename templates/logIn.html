@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>快来登录天狗商城吧！</title>
+<script type="text/javascript" src="{{
+  url_for('static', filename='Bootstrap/jquery-3.2.1.min.js') }}"></script>
+<!-- <script src="Bootstrap/jquery-3.2.1.min.js"></script> -->
+<link type="text/css" href="{{
+  url_for('static', filename='icon/font_qld94l6a51r79zfr/iconfont.css') }}" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="icon/font_qld94l6a51r79zfr/iconfont.css"> -->
+
+	<style>
+		body{
+			margin: 0;
+		}
+	</style>
+	
+	<!--顶部logo模块样式-->
+	<style>
+		@media screen and (min-width: 1200px){
+			.simpleLogo{
+				max-width: 1200px;
+			} 
+		}
+		.simpleLogo{
+			margin: 20px auto;
+		}
+		.simpleLogo img{
+			width: 300px;
+		}
+	</style>
+	
+	<!--登录窗口样式-->
+	<style>
+		.logInBlock{
+			position: absolute;
+			z-index: 1;
+			margin: 100px 0 0 50%;
+			width: 350px;
+			height: 400px;
+			background-color: #FFFFFF;
+			opacity: 0.9;
+		}
+		@media screen and (max-width: 1200px){
+			.logInBlock{
+				margin: 100px 0 0 600px;
+			}
+		}
+		.logInByPwd {
+			font-family: Aria;
+			font-size: 18px;
+			color: #666666;
+			padding: 40px 20px 10px 20px;
+		}
+		.iconfont{
+			padding: 0;
+			margin: 0;
+			display: inline-block;
+			font-size: 28px;
+			text-align: center;
+			width: 30px;
+			height: 30px;
+			background-color: #66CCFF;
+			color: #666666;
+		}
+		.userName{
+			margin: 0 20px 20px 20px;
+			display: inline-block;
+			height: 30px;
+			width: 310px;
+			border: 1px solid #CCCCCC;
+			border-radius: 3px;
+		}
+		.pwd{
+			margin: 0 20px;
+			display: inline-block;
+			height: 30px;
+			width: 310px;
+			border: 1px solid #CCCCCC;
+			border-radius:2px;
+		}
+		input{
+			line-height: 26px;
+			height: 26px;
+			width: 274px;
+			border: 1px solid transparent;
+			float: right;
+			color: #666666;
+		}
+		button{
+			height: 30px;
+			width: 280px;
+			margin: 20px 35px;
+			background-color: #66CCFF;
+			border: none;
+			border-radius: 3px;
+			font-family: Aria;
+			font-size: 16px;
+			line-height: 30px;
+			color: #666666;
+		}
+		button:hover{
+			cursor: pointer;
+			opacity: 0.8;
+		}
+		.server span{
+			margin: 5px 10px;
+			font-size: 12px;
+			float: right;
+		}
+		.server a{
+			text-decoration: none;
+			color: #666666;
+		}
+		.server a:hover{
+			color:#66CCFF;
+		}
+	</style>
+	
+	<!--背景模块样式-->
+	<style>
+		@media screen and (min-width: 1200px){
+			.backgroundImg{
+				max-width: 1200px;
+				margin: 0 auto 0 auto;
+			}
+		}
+		.backgroundImg img{
+			width: 1000px;
+			height: 700px;
+			opacity: 0.7;
+			margin-left: 100px;
+		}
+		.background{
+			width: 100%;
+			height: 700px;
+			margin-top: -705px;
+			background-color: #66CCFF;
+			min-width: 1000px;
+			z-index: -1;
+		}
+	</style>
+	
+	<!--页脚模块样式-->
+	<style>
+		@media screen and (min-width: 1200px){
+			.footer2{
+				width: 1200px;
+				margin: auto;
+			}
+		}
+		.footer2{
+			min-width: 1000px;
+			font-size: 12px;
+		}
+		.line1{
+			margin: 50px auto 10px auto;
+		}
+		.line1 span{
+			color: white;
+		}
+		.line1 a{
+			padding: 0 5px;
+			text-decoration: none;
+			color: black;
+		}
+		.line2{
+			color: #A4A4A4;
+			margin: 10px auto;
+		}
+		.line2 a{
+			color: #A4A4A4;
+			text-decoration: none;
+		}
+		.line2 div{
+			display: inline;
+			padding: 0 5px;
+		}
+		.line3 a {
+			color: #A4A4A4;
+			text-decoration: none;
+			padding: 0 5px;
+		}
+	</style>
+	
+</head>
+
+<body>
+	<!--顶部logo-->
+	<div class="simpleLogo">
+		<a href="homePage.html"><img src="{{
+  url_for('static', filename='Pictures/simplelogo.jpg') }}"></a>
+
+	</div>
+
+	<!--登录窗口-->
+	<div class="logInBlock">
+		<div><p class="logInByPwd"><strong>天狗从这里进入哦</strong></p></div>
+		<form class="logIn" action="{{url_for("logIn")}}" method="POST">
+			<div class="userName">
+				<span class="iconfont icon-yonghu"></span>
+				<input type="text" name="username" placeholder="请输入您的用户名" required="required" oninvalid="this.setCustomValidity('请输入您的用户名');">
+			</div>
+			<div class="pwd">
+				<span class="iconfont icon-mima"></span>
+				<input type="password" name="password" placeholder="请输入您的密码" required="required" oninvalid="this.setCustomValidity('请输入您的密码');">
+			</div>
+			<div class="btn"><button type="submit"><strong>登录</strong></button></div>
+		</form>
+		
+		<div class="server">
+			<span><a href="#here">忘记用户名</a></span>
+			<span><a href="#here">忘记密码</a></span>
+			<span><a href="{{url_for('register')}}">免费注册</a></span>
+		</div>
+	</div>
+
+	<!--背景-->
+	<div class="backgroundImg">
+		<img src="{{url_for('static', filename='Pictures/logInBackground.jpg')}}">
+	</div>
+	<div class="background"></div>
+	
+	<!--页脚模块-->
+	<div class="footer2">
+		<div class="line1">
+			<a href="#here">关于天狗</a>
+			<a href="#here">帮助中心</a>
+			<a href="#here">开放平台</a>
+			<a href="#here">诚聘英才</a>
+			<a href="#here">联系我们<span>我们也不会回复</span></a>
+			<a href="#here">网站合作</a>
+			<a href="#here">法律声明及隐私权政策</a>
+			<a href="#here"><del>知识产权</del><span>这种东西我们没有</span></a>
+			<a href="#here">廉政举报</a>
+			<a href="#here">规则意见征集<span>我们也不会听</span></a>
+		</div>
+		<div class="line2">
+			<div>增值电信业务经营许可证：<a href="#here"> 浙B2-20110446</a></div>
+			<div>网络文化经营许可证：<a href="#here">浙网文[2015]0295-065号</a></div>
+			<div><a href="#here">12318举报</a></div>
+		</div>
+		<div class="line3">
+			<a href="#here">©2017-2017天狗网版权所有</a>
+		</div>
+	</div>
+</body>
+</html>

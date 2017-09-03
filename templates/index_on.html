@@ -1,0 +1,1988 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>要网购，来天狗！--天狗商城欢迎您！</title>
+<script type="text/javascript" src="{{
+  url_for('static', filename='Bootstrap/jquery-3.2.1.min.js') }}"></script>
+<!-- <script src="Bootstrap/jquery-3.2.1.min.js"></script> -->
+<link type="text/css" href="{{
+  url_for('static', filename='Bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css') }}" rel="stylesheet">
+<!-- <link href="Bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet"> -->
+<script type="text/javascript" src="{{
+  url_for('static', filename='Bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js') }}"></script>
+<!-- <script src="Bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script> -->
+<link type="text/css" href="{{
+  url_for('static', filename='icon/font_we0rc7skyj9bpgb9/iconfont.css') }}" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="icon/font_we0rc7skyj9bpgb9/iconfont.css"> -->
+<link type="text/css" href="{{
+  url_for('static', filename='jQuery/jquery-ui-1.12.1.custom/jquery-ui.css') }}" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="jQuery/jquery-ui-1.12.1.custom/jquery-ui.css"> -->
+
+	<!--顶部导航栏模块样式-->
+	<style>
+		@media screen and (min-width: 1200px){
+			.topNavText{
+				max-width: 1200px;
+				margin: auto;
+			}
+			.myGoods{
+				max-width: 1200px;
+			}
+		} 
+		body{
+			font-size: 12px;
+			font-family: Arial;
+		}
+		.topNav {
+			background-color: #F2F2F2;
+			width: 100%;
+			min-width: 1000px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 12px;	
+			font-family: Arial;
+			border-bottom: 1px solid #E7E7E7;
+			color: #999999;
+		}
+		.topNav .topNavBlue{
+				color: #66CCFF;
+			}
+		.topNavText a{
+			text-decoration: none;
+			color: #999999;
+			margin: 0 10px 0 10px;
+		}
+		.leftTopNav{
+			margin: 0 10px 0 10px;
+		}
+		.topNavText a:hover{
+			color: #66ccff;
+			text-decoration: none;
+		}
+		.rightTopNav>div{
+			float: left;
+		}
+		.myGoods,.myFavorite{
+			background-color: white;
+			text-align: center;
+			width: 100px;
+			height: 70px;
+			border: 1px solid #F2F2F2;
+			border-top-color: white;
+		}
+
+	</style>
+	
+	<!--主搜索模块样式-->
+	<style>
+		@media screen and (min-width: 1200px){
+			.mainSearch{
+				max-width: 1200px;
+				margin: auto;
+			}
+		}
+		.mainSearch{
+			min-width: 1000px;
+		}
+		.mainSearch img{
+			width: 200px;
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+		.searchBox{
+			background-color: #66CCFF;
+			width: 400px;
+			height: 40px;
+			padding: 2px;
+			margin: -65px 400px;
+			display: block;
+		}
+		.searchBox input{
+			width: 275px;
+			height: 36px;
+			border: 1px solid transparent;
+			outline: none;
+		}
+		.searchBox button{
+			width: 110px;
+			border: 1px solid transparent;
+			background-color: #66CCFF;
+			color: white;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.hotSearch{
+			font-family: Arial;
+			margin-top: 5px;
+			margin-left: -20px;
+		}
+		.hotSearch a{
+			font-size: 14px;
+			padding:0 20px;
+			color: #999999;
+			text-decoration: none;
+		}
+		.hotSearch a:hover{
+			color: #66CCFF;
+		}
+		.hotSearch span{
+			color: #999999;
+		}
+	</style>
+
+	<!--主页导航模块样式-->
+	<style>
+		@media screen and (min-width: 1200px){
+			.mainNavText{
+				max-width: 1200px;
+				margin: auto;
+			}
+		}
+		.mainNav{
+			min-width: 1000px;
+			font-family: Arial;
+			margin-top: 100px;
+			background-color: #66CCFF;
+			height: 36px;
+			line-height: 36px;
+		}
+		.classifyHeader {
+			width: 200px;
+			height: 36px;
+			margin: auto;
+			margin-left: 20px;
+			font-size: 18px;
+			color: white;
+			font-weight: 600;
+			background-color: #11AAFF;
+			display: inline-block;
+		}
+		.navList {
+			font-size: 15px; 
+			display: inline;
+		}
+		.navList a{
+			color: white;
+			padding: 0 20px;
+			text-decoration: none;
+		}
+	</style>
+	
+	<!--轮播模块样式-->
+	<style>
+		.carousel-of-product{
+			min-width: 1000px;
+			height: 510px;
+			width: 1024px;
+			margin: 0 auto;
+		}
+		img.carouselImage{
+			
+			height: 510px !important;
+		}
+		.carouselBackground{
+			min-width: 1000px;
+			margin-top: -510px;
+			background-color: #E7E7E7;
+			height: 510px;
+			width: 100%;
+		}
+	</style>
+	
+	<!--分类与导航模块样式-->
+	<style>
+		.category{
+			width: 200px;
+			margin: 0 auto;
+		}
+		.categoryMenu	{
+			font-size: 14px;
+			background-color: #F2F2F2;
+			height: 510px;
+			width: 200px;
+			line-height: 30px;
+			margin-left: 20px;
+			margin-top: -510px;
+		}
+		.categoryMenu .category{
+			height: 30px;
+			padding-left: 20px;
+			text-decoration: none;
+		}
+		.category a{
+			text-decoration: none;
+			color: black;
+		}
+		.categoryMenu div:hover
+		{
+			background-color: white;
+			font-weight: bold;
+		}
+		.red a:hover{
+			color: #FF7575;
+			font-weight: bold;
+		}
+		.blue a:hover{
+			color: #97CBFF;
+			font-weight: bold;
+
+		}
+		.purple a:hover{
+			color: #CA8EC2;
+			font-weight: bold;
+		}
+		.green a:hover{
+			color: #3BCCCB;
+			font-weight: bold;
+		}
+		
+		
+		.products a{
+			color: black;
+			font-size: 14px;
+			margin: 8px;
+			text-decoration: none;
+		}
+		.products{
+			width: 800px;
+			height: 510px;
+			background-color: white;
+			margin-top: -510px;
+			margin-left: 220px;
+		}
+		.products .row{
+			margin: 20px,80px,0,80px;
+		}
+		.products .row .seperator{
+			margin-top: 20px;
+			margin-left: 80px;
+			margin-right: 80px;
+			border-bottom-style: dashed;
+			border-bottom-width: 1px;
+			border-bottom-color: #e7e7e7;
+		}
+		
+		
+		@media screen and (min-width: 1200px){
+			.categoryAndProducts{
+				width: 1200px;
+				margin: 0 auto;
+			}
+		}
+		
+	</style>
+	
+	<!--产品列表模块样式-->
+	<style>
+		@media screen and (min-width: 1200px){
+			.tianGouImg{
+				max-width: 1200px;
+				margin: auto;
+			}
+		}
+		.imgTitle {
+			margin:  20px auto 10px auto;
+			text-align: center;
+			font-family: Aria;
+			font-size: 20px;
+			color: #66CCFF;
+			
+		}
+		.tianGouImg{
+			min-width: 1200px;
+		}
+		.tianGouImg img{
+			width: 300px;
+			border-radius:8px;
+			margin: 10px 15px 10px 25px;
+		}	
+	</style>
+
+	<!--页脚模块样式-->
+	<style>
+		@media screen and (min-width: 1200px){
+			.footer{
+				width: 1200px;
+			}
+			.footer1{
+				width: 1200px;
+				margin: auto;
+			}
+			.footer2{
+				width: 1200px;
+				margin: auto;
+			}
+		}
+		.footer1{
+			margin: 30px auto;
+			padding: 0 30px;
+			min-width: 1000px;
+		}
+		.footericon{
+			font-size: 50px;
+			color: #66CCFF;
+		}
+		.footer1Block{
+			display: inline-block;
+		}
+		.footer1Header{
+			font-size: 16px;
+			font-weight: bold;
+			padding: 5px 20px;
+		}
+		.footer1Text{
+			color: #8B8B8B;
+			font-size: 14px;
+			padding:5px 10px 10px 20px;
+		}
+		.footer1Top>div{
+			align-content: center;
+			width: 25%;
+			float: left;
+		}
+		.footer1Top{
+			position: relative;
+			padding-top: 10px;
+			height: 100px;
+			border-bottom: 1px solid #999;
+		}
+		
+		.footer1Bottom>div{
+			float: left;
+			align-content: center;
+			width: 20%;
+		}
+		.footer1Bottom a{
+			width: 60px;
+			color: #8B8B8B;
+			display:block;
+			text-decoration: none;
+		}
+		.footer1 p{
+			margin: 30px auto 5px auto;
+			font-size: 16px;
+			font-weight:bold;
+		}
+		.footer1Bottom{
+			position: relative;
+			height: 200px;
+		}
+		.footer1Bgc{
+			border-top: 1px solid #999;
+			margin-top: -360px;
+			height: 330px;
+		}
+		.footer2Bgc{
+			margin-top: -92px;
+			width: 100%;
+			height: 200px;
+			border-top: 1px solid #66CCFF;
+			background-color: black;
+		}
+		.footer2{
+			min-width: 1000px
+		}
+		.line1{
+			margin: 20px auto 10px auto;
+		}
+		.line1 span{
+			color: black;
+		}
+		.line1 a{
+			padding: 0 5px;
+			text-decoration: none;
+			color: white
+		}
+		.line2{
+			color: #A4A4A4;
+			margin: 10px auto;
+		}
+		.line2 a{
+			color: #A4A4A4;
+			text-decoration: none;
+		}
+		.line2 div{
+			display: inline;
+			padding: 0 5px;
+		}
+		.line3 a {
+			color: #A4A4A4;
+			text-decoration: none;
+			padding: 0 5px;
+		}
+	</style>
+	
+	<!--顶部导航栏模块交互-->
+	<script>
+		$(document).ready(function(){
+			$(".myGoodsMenu").mouseenter(function(){
+				$(".myGoods").animate({
+					height:'toggle'
+				});
+			});
+
+			$(".myGoodsMenu").mouseleave(function(){
+				$(".myGoods").hide();
+			});
+	})
+		$(document).ready(function(){
+			$(".myFavoriteMenu").mouseenter(function(){
+				$(".myFavorite").animate({
+					height:'toggle'
+				});
+			});	
+
+			$(".myFavoriteMenu").mouseleave(function(){
+				$(".myFavorite").hide();
+			});
+	})
+	</script>
+	
+	<!--产品列表模块交互-->
+	<script>
+		$(document).ready(function(){
+			$(".daTianGou").mouseenter(function(){
+				$(".daTianGou").attr("src","../static/Pictures/大天狗Enter.jpg");
+			});
+
+			$(".daTianGou").mouseleave(function(){
+				$(".daTianGou").attr("src","../static/Pictures/大天狗.jpeg");
+			});
+		})
+		$(document).ready(function(){
+			$(".yaTianGou").mouseenter(function(){
+				$(".yaTianGou").attr("src","../static/Pictures/鸦天狗Enter.jpg");
+			});
+
+			$(".yaTianGou").mouseleave(function(){
+				$(".yaTianGou").attr("src","../static/Pictures/鸦天狗.jpg");
+			});
+		})
+		$(document).ready(function(){
+			$(".nvTianGou").mouseenter(function(){
+				$(".nvTianGou").attr("src","../static/Pictures/女天狗Enter.jpg");
+			});
+
+			$(".nvTianGou").mouseleave(function(){
+				$(".nvTianGou").attr("src","../static/Pictures/女天狗.jpg");
+			});
+		})	
+	</script>
+	
+	<!--分类导航模块交互-->
+	<script>
+		function showproducts(cid){
+			$("div.category[cid="+cid+"]").css("background-color","white");
+			$("div.category[cid="+cid+"] a").css("font-weight","bold");
+			$("div.products[cid="+cid+"]").show();
+		}
+
+		function hideproducts(cid){
+			$("div.category[cid="+cid+"]").css("background-color","#F2F2F2");
+			$("div.category[cid="+cid+"] a").css("font-weight","normal");
+			$("div.products[cid="+cid+"]").hide();
+		}
+
+		$(function(){
+			$("div.category").mouseenter(function(){
+				var cid = $(this).attr("cid");
+				showproducts(cid);
+			});
+			$("div.category").mouseleave(function(){
+				var cid = $(this).attr("cid");
+				hideproducts(cid);
+			});
+			$("div.products").mouseenter(function(){
+				var cid = $(this).attr("cid");
+				showproducts(cid);
+			});
+			$("div.products").mouseleave(function(){
+				var cid = $(this).attr("cid");
+				hideproducts(cid);
+			});
+		});
+	</script>
+</head>
+
+
+<body>
+
+	<!--顶部导航栏模块-->
+	<nav class="topNav">
+		<div class="topNavText">
+			<span class="leftTopNav">汪，欢迎来到天狗商城！</span>
+
+			<a id="if_loggedin"></a>
+			<a id="log_out" href="{{url_for('logout')}}">注销</a>
+			<a id="register" href="{{url_for('register')}}">注册</a>
+			<script type="text/javascript">
+				var data = {{ usr_info|tojson }};
+				var JSONObject = JSON.parse(data);
+				var ui_logout = document.getElementById("log_out")
+				var ui_login = document.getElementById("if_loggedin")
+				var ui_register = document.getElementById("register")
+				if(JSONObject['usrname']=='not_logged_in'){
+					ui_logout.style.display="none";
+					ui_login.innerHTML = "请登录";
+					ui_login.href = "{{url_for('logIn')}}";
+				}
+				else{
+					ui_login.innerHTML = JSONObject['usrname'];
+					ui_register.style.display="none";
+				}
+			</script>
+
+			<span class="rightTopNav pull-right">
+				<div class="myGoodsMenu"><a href="#个人菜单">我的宝贝<span class="ui-icon ui-icon-triangle-1-s"></span></a>
+					<div class="myGoods" style="position:absolute; display: none">
+						<a href="#here">已买到的宝贝</a>
+						<a href="#here">已卖出的宝贝</a>
+					</div>
+				</div>
+				
+				<div><a href="#我喜欢的宝贝"><span class="ui-icon ui-icon-heart"></span> 我关注的品牌</a></div>
+				<div><a href="#购物车"><span class="iconfont icon-gouwuche topNavBlue"></span>购物车<strong>0</strong>件</a></div>
+				<div  class="myFavoriteMenu"><a href="#我喜欢的宝贝">收藏夹<span class="ui-icon ui-icon-triangle-1-s"></span></a>
+					<div class="myFavorite" style="position:absolute; display: none">
+						<a href="#here">收藏的宝贝</a>
+						<a href="#here">收藏的店铺</a>
+					</div>
+				</div>
+				
+			</span>
+		</div>
+	</nav>
+	
+	<!--主搜索模块-->
+	<div class="mainSearch">
+			<a href="{{url_for('show_index')}}"><img src="../static/Pictures/logo.jpg"></a>
+		<div class="searchBox">
+			<form class="logIn" action="{{url_for('productList')}}" method="POST">
+				<input type="text" name="productSearched" placeholder="如何干死猫？">
+				<!-- <a href="{{url_for('productList')}}">天狗GO</a> -->
+				<button class="searchBtn" type="submit">天狗GO</button>
+			</form>
+			<div class="hotSearch">
+				<span> 
+					<a href="#"> 二手东 </a> 
+					<span>|</span>
+				</span> 
+				<span> 
+					<a href="#"> 假货宝 </a> 
+					<span>|</span>
+				</span> 
+				<span> 
+					<a href="#"> 要网购 </a> 
+					<span>|</span>
+				</span>
+				<span> 
+					<a href="#"> 来天狗 </a>
+				</span>	
+			</div>
+		</div>
+	</div>
+	
+	<!--主页导航模块-->
+	<div class="mainNav">
+		<div class="mainNavText">
+			<div class="classifyHeader"><span class="iconfont icon-liebiao" style="font-size: 25px"></span>商品分类</div>
+			<div class="navList">
+				<a href="#">天狗会员</a>
+				<a href="#">品牌街</a>
+				<a href="#">电器城</a>
+				<a href="#">汪鲜生</a>
+				<a href="#">医药馆</a>
+				<a href="#">营业厅</a>
+			</div>
+		</div>
+	</div>
+	
+	<!--轮播模块-->
+	<div data-ride="carousel" class="carousel-of-product carousel slide" data-interval="3000">
+	  	<!-- 轮播框架 -->
+	  	<ol class="carousel-indicators">
+			<li class="active" data-slide-to="0" data-target="#carousel-of-product"></li>
+			<li data-slide-to="1" data-target="#carousel-of-product"></li>
+			<li data-slide-to="2" data-target="#carousel-of-product"></li>
+			<li data-slide-to="3" data-target="#carousel-of-product"></li>
+	  	</ol>
+	  	<!--轮播图片-->
+	  	<div role="listbox" class="carousel-inner">
+			<div class="item active">
+			  	<img src="../static/Pictures/1(1).jpg" class="carousel carouselImage">
+			</div>
+			<div class="item">
+			  	<img src="../static/Pictures/2(1).jpg" class="carouselImage">
+			</div>
+			<div class="item">
+				<img src="../static/Pictures/3(1).png" class="carouselImage">
+			</div>
+			<div class="item">
+				<img src="../static/Pictures/4(1).jpg" class="carouselImage">
+			</div>
+	  	</div>
+	</div>  
+
+
+	<!--轮播背景模块-->
+	<div class="carouselBackground"></div>
+	
+	<!--分类导航模块模块-->
+	<div class="categoryAndProducts">
+		<div class="categoryMenu" style="position: relative">
+			<div class="category red" cid="1">
+				<a href="#here" class="red">
+					<span class="red iconfont icon-nvzhuang"></span>女装/内衣
+				</a>
+			</div>
+			<div class="category blue" cid="2">
+				<a href="#here" class="blue">
+					<span class="blue iconfont icon-nanzhuang"></span>男装/运动户外
+				</a>
+			</div>
+			<div class="category purple" cid="3">
+				<a href="#here" class="purple">
+					<span class="purple iconfont icon-xie"></span>女鞋/男鞋/箱包
+				</a>
+			</div>
+			<div class="category red" cid="4">
+				<a href="#here" class="red">
+					<span class="iconfont icon-huazhuangpin"></span>化妆品/个人护理
+				</a>
+			</div>
+			<div class="category green" cid="5">
+				<a href="#here" class="green">
+					<span class="iconfont icon-zuanshi"></span>珠宝/腕表/眼镜
+				</a>
+			</div>
+			<div class="category blue" cid="6">
+				<a href="#here" class="blue">
+					<span class="iconfont icon-shouji"></span>手机/数码/电子办公
+				</a>
+			</div>
+			<div class="category purple" cid="7">
+				<a href="#here" class="purple">
+					<span class="iconfont icon-muying"></span>母婴玩具
+				</a>
+			</div>
+			<div class="category red" cid="8">
+				<a href="#here" class="red">
+					<span class="iconfont icon-shipin"></span>零食/茶酒
+				</a>
+			</div>
+			<div class="category green" cid="9">
+				<a href="#here" class="green">
+					<span class=" iconfont icon-shuiguo"></span>生鲜水果
+				</a>
+			</div>
+			<div class="category blue" cid="10">
+				<a href="#here" class="blue">
+					<span class=" iconfont icon-jiadian"></span>大家电/生活电器
+				</a>
+			</div>
+			<div class="category red" cid="11">
+				<a href="#here" class="red">
+					<span class="iconfont icon-jiancaiguan"></span>家具建材
+				</a>
+			</div>
+			<div class="category green" cid="12">
+				<a href="#here" class="green">
+					<span class=" iconfont icon-qiche"></span>汽车/配件/用品
+				</a>
+			</div>
+			<div class="category purple" cid="13">
+				<a href="#here" class="purple">
+					<span class="iconfont icon-jiaju"></span>鲜花/家饰
+				</a>
+			</div>
+			<div class="category green" cid="14">
+					<a href="#here" class="green">
+					<span class="iconfont icon-zaixiangouyao"></span>医药保健
+				</a>
+			</div>
+			<div class="category red" cid="15">
+				<a href="#here" class="red">
+					<span class="iconfont icon--x"></span>厨具/收纳/宠物
+				</a>
+			</div>
+			<div class="category purple" cid="16">
+				<a href="#here" class="purple">
+					<span class=" iconfont icon-tushu"></span>图书音像
+				</a>
+			</div>
+			<div class="category blue" cid="17">
+				<a href="#here" class="blue">
+				<span class="iconfont icon-saodijiqiren"></span>机器人/人工智能
+				</a>
+			</div>
+		</div>
+		
+    	<!--cid=1 女装/内衣products-->
+		<div class="products red" cid="1" style="position: relative">
+			<div class="row ">
+					<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>当季流行 &gt;</strong></div>
+					<a href="#here" style="color: #FF7575">夏季新品</a>
+					<a href="#here" style="color: #FF7575">商场同款</a>
+					<a href="#here">气质连衣裙</a>
+					<a href="#here">印花衬衫</a>
+					<a href="#here">百搭休闲裤</a>
+					<div class="seperator"></div>
+				</div>     
+			<div class="row ">
+					<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>精选上装 &gt;</strong></div>
+					<a href="#here" style="color: #FF7575">T恤</a>
+					<a href="#here">衬衫</a>
+					<a href="#here">针织衫</a>
+					<a href="#here" style="color: #FF7575">小西服</a>
+					<a href="#here">卫衣</a>
+					<div class="seperator"></div>
+				</div>    
+			<div class="row ">
+					<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>浪漫裙装 &gt;</strong></div>
+					<a href="#here" style="color: #FF7575">连衣裙</a>
+					<a href="#here">蕾丝连衣裙</a>
+					<a href="#here" style="color: #FF7575">蕾丝半身裙</a>
+					<a href="#here">百褶裙</a>
+					<a href="#here">A字裙</a>
+					<div class="seperator"></div>
+				</div> 
+			<div class="row ">
+					<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>女士下装 &gt;</strong></div>
+					<a href="#here">短裤</a>
+					<a href="#here">休闲裤</a>
+					<a href="#here" style="color: #FF7575">牛仔裤</a>
+					<a href="#here" style="color: #FF7575">小脚裤</a>
+					<a href="#here">背带裤</a>
+					<div class="seperator"></div>
+				</div> 
+			<div class="row ">
+					<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>特色女装 &gt;</strong></div>
+					<a href="#here" style="color: #FF7575">时尚套装</a>
+					<a href="#here">休闲套装</a>
+					<a href="#here">大码女装</a>
+					<a href="#here">职业套装</a>
+					<a href="#here">精致礼服</a>
+					<div class="seperator"></div>
+				</div> 
+			<div class="row ">
+					<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>文胸塑身 &gt;</strong></div>
+					<a href="#here">光面文胸</a>
+					<a href="#here">运动文胸</a>
+					<a href="#here">美背文胸</a>
+					<a href="#here">聚拢文胸</a>
+					<a href="#here">轻薄塑身</a>
+					<div class="seperator"></div>
+				</div> 
+			<div class="row ">
+					<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;:"><strong>家&ensp;居&ensp;装 &gt;</strong></div>
+					<a href="#here">春夏家居装</a>
+					<a href="#here">纯棉家居装</a>
+					<a href="#here">真丝家居装</a>
+					<a href="#here">春夏睡裙</a>
+					<a href="#here">性感睡裙</a>
+					<div class="seperator"></div>
+				</div> 
+			<div class="row ">
+					<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>签订契约 &gt;</strong></div>
+					<a href="#here"><del>快来成为女装大佬吧！</del></a>
+					<div class="seperator"></div>
+				</div> 
+    	</div>
+    	<!--cid=2 男装/户外运动products-->
+    	<div class="products blue" cid="2" style="position: relative">
+        	<div class="row ">
+        		<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>当季流行 &gt;</strong></div>
+				<a href="#here" style="color: #97CBFF">夏季新品</a>
+                <a href="#here" style="color: #97CBFF">短袖T恤</a>
+                <a href="#here">牛仔衬衫</a>
+                <a href="#here" style="color: #97CBFF">泳衣</a>
+                <a href="#here">百搭休闲裤</a>
+            	<div class="seperator"></div>
+            </div>     
+            <div class="row ">
+            	<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>男士外套 &gt;</strong></div>
+				<a href="#here" style="color: #97CBFF">T恤</a>
+                <a href="#here" style="color: #97CBFF">夹克</a>
+                <a href="#here" style="color: #97CBFF">单西</a>
+                <a href="#here">风衣</a>
+                <a href="#here">运动服</a>
+            	<div class="seperator"></div>
+            </div>    
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>男士内搭 &gt;</strong></div>
+				<a href="#here" style="color: #97CBFF">短袖T恤</a>
+                <a href="#here">针织衫/毛衣</a>
+                <a href="#here" style="color: #97CBFF">POLO衫</a>
+                <a href="#here">背心</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>男士裤装 &gt;</strong></div>
+				<a href="#here" style="color: #97CBFF">休闲裤</a>
+                <a href="#here">西裤</a>
+                <a href="#here" style="color: #97CBFF">牛仔裤</a>
+                <a href="#here" style="color: #97CBFF">小脚裤</a>
+                <a href="#here">九分裤</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>特色男装 &gt;</strong></div>
+				<a href="#here"><del>噫，你果然是个gay，居然想看特别色色的男装（捂脸）</del></a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>户外用品 &gt;</strong></div>
+				<a href="#here" style="color: #97CBFF">钓竿</a>
+                <a href="#here">双肩背包</a>
+                <a href="#here">防晒衣</a>
+                <a href="#here">帐篷</a>
+                <a href="#here" style="color: #97CBFF">手电筒</a>
+                <a href="#here">刀具</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;:"><strong>运动用品 &gt;</strong></div>
+				<a href="#here" style="color: #97CBFF">跑步机</a>
+                <a href="#here" style="color: #97CBFF">泳衣</a>
+                <a href="#here">自行车</a>
+                <a href="#here">篮球</a>
+                <a href="#here">网球拍</a>
+            	<div class="seperator"></div>
+            </div> 
+    	</div> 
+    	<!--cid=3 女鞋/男鞋/箱包products-->
+   	    <div class="products purple" cid="3" style="position: relative">
+        	<div class="row ">
+        		<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>推荐女鞋 &gt;</strong></div>
+				<a href="#here" style="color: #ca8ec2">永远的帆布鞋</a>
+                <a href="#here" style="color: #ca8ec2">舒适的平底单鞋</a>
+                <a href="#here">布洛克牛津鞋</a>
+                <a href="#here">甜美优雅</a>
+                <a href="#here" style="color: #ca8ec2">运动风格</a>
+            	<div class="seperator"></div>
+            </div>     
+            <div class="row ">
+            	<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>潮流男鞋 &gt;</strong></div>
+				<a href="#here" style="color: #ca8ec2">商场同款</a>
+                <a href="#here" style="color: #ca8ec2">休闲鞋</a>
+                <a href="#here">正装皮鞋</a>
+                <a href="#here">帆布鞋</a>
+                <a href="#here" style="color: #ca8ec2">板鞋</a>
+            	<div class="seperator"></div>
+            </div>    
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>女&ensp;单&ensp;鞋 &gt;</strong></div>
+				<a href="#here" style="color: #ca8ec2">单鞋</a>
+                <a href="#here">帆布鞋</a>
+                <a href="#here" style="color: #ca8ec2">商场同款</a>
+                <a href="#here">小白鞋</a>
+                <a href="#here">牛津鞋</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>特&ensp;色&ensp;鞋 &gt;</strong></div>
+				<a href="#here">妈妈鞋</a>
+                <a href="#here" style="color: #ca8ec2">大码女鞋</a>
+                <a href="#here" style="color: #ca8ec2">小码女鞋</a>
+                <a href="#here" style="color: #ca8ec2">男内增高</a>
+                <a href="#here">清软风</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>潮流女包 &gt;</strong></div>
+				<a href="#here" style="color: #ca8ec2">时尚套装</a>
+                <a href="#here" style="color: #ca8ec2">新品推荐</a>
+                <a href="#here" style="color: #ca8ec2">商场同款</a>
+                <a href="#here">女士钱包</a>
+                <a href="#here">单肩包</a>
+                <a href="#here">化妆包</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>特色男包 &gt;</strong></div>
+				<a href="#here" style="color: #ca8ec2">男士钱包</a>
+                <a href="#here">收纳包</a>
+                <a href="#here" style="color: #ca8ec2">手提包</a>
+                <a href="#here">斜挎包</a>
+                <a href="#here">新品推荐</a>
+            	<div class="seperator"></div>
+            </div> 
+    	</div> 
+   		<!--cid=4 化妆品/个人护理products-->
+    	<div class="products red" cid="4" style="position: relative">
+        	<div class="row ">
+        		<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>护&ensp;肤&ensp;品 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">官方直销</a>
+                <a href="#here" style="color: #FF7575">护肤套装</a>
+                <a href="#here">眼霜</a>
+                <a href="#here">丰胸</a>
+                <a href="#here" style="color: #FF7575">补水</a>
+                <a href="#here">祛痘</a>
+                <a href="#here">护手霜</a>
+            	<div class="seperator"></div>
+            </div>     
+            <div class="row ">
+            	<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>彩&emsp;&emsp;妆 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">时尚彩妆</a>
+                <a href="#here">BB霜</a>
+                <a href="#here">香水</a>
+                <a href="#here" style="color: #FF7575">口红</a>
+                <a href="#here">美甲工具</a>
+            	<div class="seperator"></div>
+            </div>    
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>男士护肤 &gt;</strong></div>
+				<a href="#here">洁面</a>
+                <a href="#here">爽肤水</a>
+                <a href="#here">控油</a>
+                <a href="#here">防晒</a>
+                <a href="#here">眼部护理</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>肤质推荐 &gt;</strong></div>
+				<a href="#here">混合偏油</a>
+                <a href="#here" style="color: #FF7575">中性偏干</a>
+                <a href="#here">敏感型</a>
+                <a href="#here">中性</a>
+                <a href="#here" style="color: #FF7575">混合型</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>美发护发 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">洗发水</a>
+                <a href="#here">护发素</a>
+                <a href="#here">染发霜</a>
+                <a href="#here" style="color: #FF7575">整顶假发</a>
+                <a href="#here">男性假发</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>口腔护理 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">牙膏</a>
+                <a href="#here">牙刷</a>
+                <a href="#here" style="color: #FF7575">进口牙刷</a>
+                <a href="#here">牙线</a>
+                <a href="#here">口气清新剂</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;:"><strong>身体女性 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">沐浴露</a>
+                <a href="#here">香皂</a>
+                <a href="#here" style="color: #FF7575">洗手液</a>
+                <a href="#here">手动剃须刀</a>
+                <a href="#here" style="color: #FF7575">卫生巾</a>
+            	<div class="seperator"></div>
+            </div> 
+    	</div> 
+   		<!--cid=5 珠宝/腕表/眼睛products-->
+		<div class="products green" cid="5" style="position: relative">
+        	<div class="row">
+        		<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>黄金首饰 &gt;</strong></div>
+				<a href="#here" style="color: #3BCCCB">耳钉</a>
+                <a href="#here">K金饰品</a>
+                <a href="#here">投资黄金</a>
+                <a href="#here" style="color: #3BCCCB">婚嫁套饰</a>
+                <a href="#here">转运珠</a>
+            	<div class="seperator"></div>
+            </div>     
+            <div class="row ">
+            	<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>钻石彩宝 &gt;</strong></div>
+				<a href="#here" style="color: #3BCCCB">结婚钻戒</a>
+                <a href="#here">钻石耳坠</a>
+                <a href="#here">钻石手链</a>
+                <a href="#here" style="color: #3BCCCB">红蓝宝石</a>
+                <a href="#here">坦桑石</a>
+            	<div class="seperator"></div>
+            </div>    
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>珍珠玉翠 &gt;</strong></div>
+				<a href="#here">海水珍珠</a>
+                <a href="#here">和田玉</a>
+                <a href="#here" style="color: #3BCCCB">翡翠手镯</a>
+                <a href="#here" style="color: #3BCCCB">天然琥珀</a>
+                <a href="#here">翡翠项链</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>潮流饰品 &gt;</strong></div>
+				<a href="#here" style="color: #3BCCCB">明星同款</a>
+                <a href="#here" style="color: #3BCCCB"><del>凶真</del></a>
+                <a href="#here">手镯</a>
+                <a href="#here">戒指</a>
+                <a href="#here">发饰</a>
+                <a href="#here">传统银饰</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>腕&emsp;&emsp;表 &gt;</strong></div>
+				<a href="#here" style="color: #3BCCCB">瑞士名表</a>
+                <a href="#here" style="color: #3BCCCB">日韩港表</a>
+                <a href="#here">儿童手表</a>
+                <a href="#here">情侣表</a>
+                <a href="#here">防水表</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>眼&emsp;&emsp;镜 &gt;</strong></div>
+				<a href="#here" style="color: #3BCCCB">太阳镜</a>
+                <a href="#here">墨镜</a>
+                <a href="#here">眼镜框</a>
+                <a href="#here" style="color: #3BCCCB">近视眼镜</a>
+                <a href="#here">驾驶镜</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;:"><strong>烟&emsp;&emsp;具 &gt;</strong></div>
+				<a href="#here" style="color: #3BCCCB">电子烟</a>
+                <a href="#here">烟斗</a>
+                <a href="#here">水烟</a>
+                <a href="#here">女士烟</a>
+                <a href="#here">鼻烟</a>
+                <a href="#here">雪茄</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>土豪专栏 &gt;</strong></div>
+				<a href="#here">大金链子</a>
+           		<a href="#here">黄金腕表</a>
+				<a href="#here">玉扳指</a>
+           		<a href="#here">大皮袄子</a>
+            	<div class="seperator"></div>
+            </div> 
+    	</div> 
+   		<!--cid=6 手机/数码/电子办公products-->
+    	<div class="products blue" cid="6" style="position: relative">
+        	<div class="row ">
+        		<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>热门手机 &gt;</strong></div>
+				<a href="#here" style="color: #97CBFF">大米</a>
+                <a href="#here">爱Phone</a>
+                <a href="#here">DPPO</a>
+                <a href="#here">五星</a>
+                <a href="#here">魑族</a>
+                <a href="#here">viwo</a>
+            	<div class="seperator"></div>
+            </div>     
+            <div class="row ">
+            	<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>特色手机 &gt;</strong></div>
+				<a href="#here">YunOS</a>
+                <a href="#here">双卡双待</a>
+                <a href="#here">自拍美颜</a>
+                <a href="#here">电信</a>
+                <a href="#here">合约机</a>
+            	<div class="seperator"></div>
+            </div>    
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>电脑整机 &gt;</strong></div>
+				<a href="#here" style="color: #97CBFF">笔记本</a>
+                <a href="#here">平板电脑</a>
+                <a href="#here" style="color: #97CBFF">台式机</a>
+                <a href="#here">一体机</a>
+                <a href="#here">DIY</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>智能数码 &gt;</strong></div>
+				<a href="#here">智能设备</a>
+                <a href="#here" style="color: #97CBFF">智能手表</a>
+                <a href="#here">智能手环</a>
+                <a href="#here">VR眼镜</a>
+                <a href="#here" style="color: #97CBFF">智能摄像</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>游戏组装 &gt;</strong></div>
+				<a href="#here">DIY电脑</a>
+				<a href="#here" style="color: #97CBFF">竞技DIY</a>
+				<a href="#here">显示器</a>
+				<a href="#here">游戏手柄</a>
+				<a href="#here" style="color: #97CBFF">机械键盘</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>硬件存储 &gt;</strong></div>
+				<a href="#here" style="color: #97CBFF">显示器</a>
+                <a href="#here">固态硬盘</a>
+                <a href="#here" style="color: #97CBFF">CPU</a>
+                <a href="#here">显卡</a>
+                <a href="#here">主版</a>
+                <a href="#here">路由器</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>摄影摄像 &gt;</strong></div>
+				<a href="#here">相机</a>
+                <a href="#here" style="color: #97CBFF">单反</a>
+                <a href="#here">单电微单</a>
+                <a href="#here" style="color: #97CBFF">自拍神器</a>
+                <a href="#here">拍立得</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>影音娱乐 &gt;</strong></div>
+				<a href="#here" style="color: #97CBFF">耳机</a>
+                <a href="#here">数码影音</a>
+                <a href="#here">家庭影院</a>
+                <a href="#here" style="color: #97CBFF">蓝牙耳机</a>
+                <a href="#here">网络播放器</a>
+            	<div class="seperator"></div>
+            </div>   
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>办公文教 &gt;</strong></div>
+				<a href="#here">电子书</a>
+                <a href="#here">笔类/书写工具</a>
+                <a href="#here">打印机</a>
+                <a href="#here">智能投影</a>
+                <a href="#here">保险箱</a>
+            	<div class="seperator"></div>
+            </div> 
+        </div> 
+   		<!--cid=7 母婴玩具products-->
+       	<div class="products purple" cid="7" style="position: relative">
+        	<div class="row ">
+        		<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>童&emsp;&emsp;装 &gt;</strong></div>
+				<a href="#here" style="color: #ca8ec2">夏装</a>
+                <a href="#here" style="color: #ca8ec2">商场同款</a>
+                <a href="#here">套装</a>
+                <a href="#here" style="color: #ca8ec2">裤子</a>
+                <a href="#here">裙子</a>
+            	<div class="seperator"></div>
+            </div>     
+            <div class="row ">
+            	<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>婴&ensp;儿&ensp;服 &gt;</strong></div>
+				<a href="#here" style="color: #ca8ec2">连体衣</a>
+                <a href="#here">内衣套装</a>
+                <a href="#here">裤子</a>
+                <a href="#here">婴儿礼盒</a>
+                <a href="#here" style="color: #ca8ec2">肚兜</a>
+            	<div class="seperator"></div>
+            </div>    
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>车床用品 &gt;</strong></div>
+				<a href="#here" style="color: #ca8ec2">婴儿推车</a>
+                <a href="#here">学步车</a>
+                <a href="#here" style="color: #ca8ec2">安全座椅</a>
+                <a href="#here">餐椅</a>
+                <a href="#here">婴儿床</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>喂&emsp;&emsp;养 &gt;</strong></div>
+				<a href="#here" style="color: #ca8ec2">奶瓶</a>
+                <a href="#here">奶嘴</a>
+                <a href="#here" style="color: #ca8ec2">辅食机</a>
+                <a href="#here">调奶器</a>
+                <a href="#here">围嘴</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>洗&emsp;&emsp;护 &gt;</strong></div>
+				<a href="#here">洗发水</a>
+                <a href="#here" style="color: #ca8ec2">沐浴露</a>
+                <a href="#here">浴盆</a>
+                <a href="#here">湿巾</a>
+                <a href="#here">理发器</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>玩&emsp;&emsp;具 &gt;</strong></div>
+				<a href="#here" style="color: #ca8ec2">婴儿玩具</a>
+                <a href="#here" style="color: #ca8ec2">儿童自行车</a>
+                <a href="#here">毛绒玩具</a>
+                <a href="#here">积木</a>
+                <a href="#here">电动遥控</a>
+            	<div class="seperator"></div>
+            </div> 
+            <div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>天狗周边 &gt;</strong></div>
+				<a href="#here">大天狗手办</a>
+                <a href="#here">鸦天狗手办</a>
+                <a href="#here">女天狗手办</a>
+                <a href="#here"><del>女天狗抱枕</del></a>
+            	<div class="seperator"></div>
+            </div> 
+            <div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>奶&emsp;&emsp;粉 &gt;</strong></div>
+				<a href="#here" style="color: #ca8ec2">牛奶粉</a>
+                <a href="#here">羊奶粉</a>
+                <a href="#here">特殊配方奶粉</a>
+                <a href="#here">宝宝零食</a>
+                <a href="#here">DHA</a>
+            	<div class="seperator"></div>
+            </div>   
+            <div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>孕&emsp;&emsp;产 &gt;</strong></div>
+				<a href="#here" style="color: #ca8ec2">孕产用品</a>
+                <a href="#here" style="color: #ca8ec2">孕妈洗护</a>
+                <a href="#here" style="color: #ca8ec2">孕妈装</a>
+                <a href="#here">月子服</a>
+                <a href="#here">防辐射</a>
+            	<div class="seperator"></div>
+            </div> 
+        </div>
+   		<!--cid=8 零食/茶酒products-->
+      	<div class="products red" cid="8" style="position: relative">
+        	<div class="row ">
+        		<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>进口食品 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">进口零食</a>
+                <a href="#here" style="color: #FF7575">进口饼干</a>
+                <a href="#here" style="color: #FF7575">进口巧克力</a>
+                <a href="#here">进口糖果</a>
+                <a href="#here" style="color: #FF7575">进口牛奶</a>
+            	<div class="seperator"></div>
+            </div>     
+            <div class="row ">
+            	<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>休闲零食 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">零食</a>
+                <a href="#here" style="color: #FF7575">坚果</a>
+                <a href="#here" style="color: #FF7575">饼干</a>
+                <a href="#here">蛋糕</a>
+                <a href="#here">红枣</a>
+                <a href="#here">猪肉脯</a>
+                <a href="#here">牛肉干</a>
+            	<div class="seperator"></div>
+            </div>    
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>酒&emsp;&emsp;类 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">白酒</a>
+                <a href="#here" style="color: #FF7575">红酒</a>
+                <a href="#here">保健酒</a>
+                <a href="#here">黄酒</a>
+                <a href="#here">啤酒</a>
+                <a href="#here" style="color: #FF7575">葡萄酒</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>茶&emsp;&emsp;叶 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">西湖龙井</a>
+                <a href="#here">大红袍</a>
+                <a href="#here">玫瑰花茶</a>
+                <a href="#here">菊花茶</a>
+                <a href="#here">柠檬片</a>
+                <a href="#here">普洱茶</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>乳品冲饮 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">牛奶</a>
+                <a href="#here" style="color: #FF7575">酸奶</a>
+                <a href="#here">成人奶粉</a>
+                <a href="#here">速溶咖啡</a>
+                <a href="#here">果汁</a>
+				<a href="#here">碳酸饮料</a>
+                <div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>粮油速食 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">橄榄油</a>
+                <a href="#here">食用油</a>
+                <a href="#here" style="color: #FF7575">大米</a>
+                <a href="#here" style="color: #FF7575">方便面</a>
+                <a href="#here">手抓饼</a>
+                <a href="#here">寿司</a>
+            	<div class="seperator"></div>
+            </div> 
+    	</div>
+   		<!--cid=9 生鲜水果products-->
+    	<div class="products green" cid="9" style="position: relative">
+        	<div class="row">
+        		<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>新鲜蔬菜 &gt;</strong></div>
+				<a href="#here">土豆</a>
+                <a href="#here" style="color: #3BCCCB">番薯</a>
+                <a href="#here" style="color: #3BCCCB">山药</a>
+                <a href="#here">生菜</a>
+                <a href="#here">莲藕</a>
+                <a href="#here">玉米</a>
+            	<div class="seperator"></div>
+            </div>     
+            <div class="row ">
+            	<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>冰&ensp;淇&ensp;淋 &gt;</strong></div>
+				<a href="#here">冰淇淋</a>
+                <a href="#here" style="color: #3BCCCB">哈根迪斯</a>
+                <a href="#here">movenquick莫凡快</a>
+                <a href="#here" style="color: #3BCCCB">tap-top冰淇淋</a>
+            	<div class="seperator"></div>
+            </div>    
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>蛋&emsp;&emsp;类 &gt;</strong></div>
+				<a href="#here" style="color: #3BCCCB">鸡蛋</a>
+                <a href="#here">鸭蛋</a>
+                <a href="#here">鹅蛋</a>
+                <a href="#here" style="color: #3BCCCB">咸鸭蛋</a>
+                <a href="#here">鹌鹑蛋</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>肉&emsp;&emsp;类 &gt;</strong></div>
+				<a href="#here" style="color: #3BCCCB">牛排</a>
+                <a href="#here" style="color: #3BCCCB">牛腩</a>
+                <a href="#here">牛肉</a>
+                <a href="#here" style="color: #3BCCCB">羊排</a>
+                <a href="#here">羊腿</a>
+                <a href="#here">羊蝎子</a>
+                <a href="#here" style="color: #3BCCCB">鸡翅</a>
+                <a href="#here">鸡胸</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>海鲜水产 &gt;</strong></div>
+				<a href="#here">鳕鱼</a>
+                <a href="#here" style="color: #3BCCCB">三文鱼</a>
+                <a href="#here">金枪鱼</a>
+                <a href="#here" style="color: #3BCCCB">龙利鱼</a>
+                <a href="#here" style="color: #3BCCCB">扇贝</a>
+                <a href="#here">大闸蟹</a>
+                <a href="#here">鱼丸</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>新鲜水果 &gt;</strong></div>
+				<a href="#here" style="color: #3BCCCB">奇异果</a>
+                <a href="#here">车厘子</a>
+                <a href="#here">芒果</a>
+                <a href="#here" style="color: #3BCCCB">火龙果</a>
+                <a href="#here">苹果</a>
+                <a href="#here">橙子</a>
+                <a href="#here">西瓜</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;:"><strong>精选干货 &gt;</strong></div>
+				<a href="#here">干贝/瑶柱</a>
+                <a href="#here" style="color: #3BCCCB">虾皮/虾米/海米</a>
+                <a href="#here">鱼干</a>
+                <a href="#here">海带</a>
+                <a href="#here" style="color: #3BCCCB">紫菜</a>
+            	<div class="seperator"></div>
+            </div> 
+    	</div>
+   		<!--cid=10 大家电/生活电器products-->
+    	<div class="products blue" cid="10" style="position: relative">
+        	<div class="row ">
+        		<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>平板电视 &gt;</strong></div>
+				<a href="#here" style="color: #97CBFF">4K超高清</a>
+                <a href="#here">国产</a>
+                <a href="#here">云电视</a>
+                <a href="#here" style="color: #97CBFF">曲面</a>
+                <a href="#here">客厅首选</a>
+            	<div class="seperator"></div>
+            </div>     
+            <div class="row ">
+            	<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>空&emsp;&emsp;调 &gt;</strong></div>
+				<a href="#here" style="color: #97CBFF">节能</a>
+                <a href="#here" style="color: #97CBFF">智能</a>
+                <a href="#here">变频</a>
+                <a href="#here">中央空调</a>
+                <a href="#here" style="color: #97CBFF">挂机</a>
+            	<div class="seperator"></div>
+            </div>    
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>冰&emsp;&emsp;箱 &gt;</strong></div>
+        	    <a href="#here">热门之选</a>
+				<a href="#here" style="color: #97CBFF">无霜</a>
+                <a href="#here">三门</a>
+                <a href="#here" style="color: #97CBFF">对开门</a>
+                <a href="#here">智能</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>洗&ensp;衣&ensp;机 &gt;</strong></div>
+				<a href="#here" style="color: #97CBFF">滚筒洗</a>
+                <a href="#here">波轮洗</a>
+                <a href="#here" style="color: #97CBFF">洗烘一体</a>
+                <a href="#here">大容量</a>
+                <a href="#here" style="color: #97CBFF">热门</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>厨房大电 &gt;</strong></div>
+				<a href="#here" style="color: #97CBFF">烟灶套装</a>
+                <a href="#here">侧吸油烟机</a>
+                <a href="#here" style="color: #97CBFF">欧式油烟机</a>
+                <a href="#here">燃气灶</a>
+                <a href="#here">集成灶</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>热&ensp;水&ensp;器 &gt;</strong></div>
+				<a href="#here">电热水器</a>
+                <a href="#here">燃气热水器</a>
+                <a href="#here" style="color: #97CBFF">遥控</a>
+                <a href="#here">太阳能</a>
+                <a href="#here">空气能</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;:"><strong>生活电器 &gt;</strong></div>
+				<a href="#here" style="color: #97CBFF">空气净化器</a>
+                <a href="#here">电饭煲</a>
+                <a href="#here">吸尘器</a>
+                <a href="#here" style="color: #97CBFF">电风扇</a>
+                <a href="#here">除湿机</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;:"><strong>个护健康 &gt;</strong></div>
+				<a href="#here" style="color: #97CBFF">剃须刀</a>
+                <a href="#here" style="color: #97CBFF">电动牙刷</a>
+                <a href="#here">吹风机</a>
+                <a href="#here">理发器</a>
+                <a href="#here" style="color: #97CBFF">体重秤</a>
+            	<div class="seperator"></div>
+            </div> 
+            <div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;:"><strong>精品推荐 &gt;</strong></div>
+				<a href="#here" style="color: #97CBFF">脱毛器</a>
+                <a href="#here">吊扇</a>
+                <a href="#here">空调扇</a>
+                <a href="#here" style="color: #97CBFF">冰淇淋机</a>
+                <a href="#here">碎冰机</a>
+            	<div class="seperator"></div>
+            </div> 
+    	</div>
+   		<!--cid=11 家具建材products-->
+		<div class="products red" cid="11" style="position: relative">
+        	<div class="row ">
+        		<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>成套家具 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">客厅成套家具</a>
+                <a href="#here">餐厅成套家具</a>
+                <a href="#here" style="color: #FF7575">卧室成套家具</a>
+                <a href="#here">儿童成套家具</a>
+            	<div class="seperator"></div>
+            </div>     
+            <div class="row ">
+            	<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>客厅餐厅 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">沙发</a>
+                <a href="#here">布艺沙发</a>
+                <a href="#here">茶几</a>
+                <a href="#here" style="color: #FF7575">电视柜</a>
+                <a href="#here" style="color: #FF7575">餐桌</a>
+                <a href="#here">餐椅</a>
+            	<div class="seperator"></div>
+            </div>    
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>卧室家具 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">床</a>
+                <a href="#here">实木床</a>
+                <a href="#here" style="color: #FF7575">双人床</a>
+                <a href="#here">衣柜</a>
+                <a href="#here">床垫</a>                
+                <a href="#here" style="color: #FF7575">乳胶床垫</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>书房儿童 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">电脑桌</a>
+                <a href="#here">书架</a>
+                <a href="#here" style="color: #FF7575">办公桌</a>
+                <a href="#here" style="color: #FF7575">儿童床</a>
+                <a href="#here">儿童沙发</a>
+                <a href="#here" style="color: #FF7575">高低床</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>厨房卫浴 &gt;</strong></div>
+				<a href="#here">浴霸</a>
+                <a href="#here">集成吊顶</a>
+                <a href="#here" style="color: #FF7575">马桶</a>
+                <a href="#here">水槽套装</a>
+                <a href="#here" style="color: #FF7575">智能马桶盖</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>灯饰照明 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">吸顶灯</a>
+                <a href="#here">水晶吊灯</a>
+                <a href="#here">射灯</a>
+                <a href="#here">壁灯</a>
+                <a href="#here">LED灯</a>
+				<a href="#here" style="color: #FF7575">成套灯具</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;:"><strong>五金工具 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">开关插座</a>
+                <a href="#here">接线板</a>
+                <a href="#here">USB插座</a>
+				<a href="#here" style="color: #FF7575">监控摄像头</a>
+                <a href="#here">拉手</a>
+				<a href="#here" style="color: #FF7575">工具箱</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>全屋定制 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">全屋定制</a>
+				<a href="#here">榻榻米</a>
+           		<a href="#here" style="color: #FF7575">定制衣柜</a>
+				<a href="#here">木门</a>
+				<a href="#here">门窗</a>
+				<a href="#here" style="color: #FF7575">门</a>
+            	<div class="seperator"></div>
+            </div> 
+            <div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;:"><strong>装修设计 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">装修特权</a>
+				<a href="#here" style="color: #FF7575">全包</a>
+				<a href="#here" style="color: #FF7575">半包</a>
+				<a href="#here" style="color: #FF7575">拎包入住</a>
+                <a href="#here">设计</a>
+                <a href="#here">软装配饰</a>
+            	<div class="seperator"></div>
+            </div> 
+            
+    	</div>
+   		<!--cid=12 汽车/配件/用品products-->
+    	<div class="products green" cid="12" style="position: relative">
+        	<div class="row">
+        		<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>整&emsp;&emsp;车 &gt;</strong></div>
+				<a href="#here" style="color: #3BCCCB">首付一成开新车</a>
+                <a href="#here">订金购车</a>
+                <a href="#here">新能源汽车</a>
+                <a href="#here">SUV</a>
+                <a href="#here">MPV</a>
+                <a href="#here">小型车</a>
+            	<div class="seperator"></div>
+            </div>     
+            <div class="row ">
+            	<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>座垫脚垫 &gt;</strong></div>
+                <a href="#here" style="color: #3BCCCB">春季坐垫</a>
+                <a href="#here">汽车脚垫</a>
+				<a href="#here">专用坐垫</a>
+				<a href="#here">专用套装</a>
+                <a href="#here" style="color: #3BCCCB">女性坐垫</a>
+            	<div class="seperator"></div>
+            </div>    
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>机油轮胎 &gt;</strong></div>
+				<a href="#here" style="color: #3BCCCB">全合成机油</a>
+                <a href="#here">半合成机油</a>
+                <a href="#here">矿物质机油</a>
+                <a href="#here">15寸轮胎</a>
+                <a href="#here">17寸轮胎</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>电子导航 &gt;</strong></div>
+				<a href="#here" style="color: #3BCCCB">行车记录仪</a>
+                <a href="#here">安全预警仪</a>
+                <a href="#here" style="color: #3BCCCB">后视镜导航</a>
+                <a href="#here" style="color: #3BCCCB">车载导航</a>
+                <a href="#here">便携式导航</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>车载电器 &gt;</strong></div>
+        	   
+                <a href="#here" style="color: #3BCCCB">空气净化器</a>
+                <a href="#here">吸尘器</a>
+                <a href="#here" style="color: #3BCCCB">车载冰箱</a>
+                <a href="#here">车载MP3</a>
+                <a href="#here" style="color: #3BCCCB">手机充电器</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>维修保养 &gt;</strong></div>
+                <a href="#here" style="color: #3BCCCB">汽配城</a>
+                <a href="#here">雨刮器</a>
+                <a href="#here">刹车片</a>
+                <a href="#here" style="color: #3BCCCB">空调滤芯</a>
+                <a href="#here">空气滤芯</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;:"><strong>美容清洗 &gt;</strong></div>
+                <a href="#here">洗车机</a>
+                <a href="#here">水枪</a>
+                <a href="#here">车蜡</a>
+                <a href="#here">汽油添加剂</a>
+                <a href="#here">补漆笔</a>
+                <a href="#here">玻璃水</a>
+            	<div class="seperator"></div>
+            </div> 
+    		<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;:"><strong>外饰改装 &gt;</strong></div>
+                <a href="#here" style="color: #3BCCCB">汽车贴膜</a>
+                <a href="#here">装饰灯</a>
+                <a href="#here">改色膜</a>
+                <a href="#here">脚踏板</a>
+                <a href="#here">车顶架</a>
+            	<div class="seperator"></div>
+            </div> 
+    	</div>
+   		<!--cid=13 鲜花/家饰products-->
+    	<div class="products purple" cid="13" style="position: relative">
+        	<div class="row ">
+        		<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>床上用品 &gt;</strong></div>
+				<a href="#here" style="color: #ca8ec2">四件套</a>
+                <a href="#here">枕头</a>
+                <a href="#here">床单</a>
+                <a href="#here" style="color: #ca8ec2">毯子</a>
+                <a href="#here">凉席</a>
+                <a href="#here">蚊帐</a>
+            	<div class="seperator"></div>
+            </div>     
+            <div class="row ">
+            	<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>居家布艺 &gt;</strong></div>
+				<a href="#here">床帘</a>
+                <a href="#here" style="color: #ca8ec2">遮光窗帘</a>
+                <a href="#here">毛巾</a>
+                <a href="#here">棉拖</a>
+                <a href="#here" style="color: #ca8ec2">抱枕</a>
+				<a href="#here" style="color: #ca8ec2">十字绣</a>
+            	<div class="seperator"></div>
+            </div>    
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>家居饰品 &gt;</strong></div>
+				<a href="#here" style="color: #ca8ec2">墙贴</a>
+                <a href="#here">花瓶</a>
+                <a href="#here" style="color: #ca8ec2">壁纸</a>
+                <a href="#here">相框</a>
+                <a href="#here">冰箱贴</a>
+                <a href="#here">招财猫</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>鲜花绿植  &gt;</strong></div>
+				<a href="#here" style="color: #ca8ec2">红玫瑰</a>
+                <a href="#here"><del>百合</del></a>
+                <a href="#here" style="color: #ca8ec2">萌多肉</a>
+                <a href="#here">鲜花礼盒</a>
+                <a href="#here" style="color: #ca8ec2">园艺工具</a>
+            	<div class="seperator"></div>
+            </div> 
+        </div>
+		<!--cid=14 医药保健products-->
+		<div class="products green" cid="14" style="position: relative">
+        	<div class="row">
+        		<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>保&ensp;健&ensp;品 &gt;</strong></div>
+				<a href="#here" style="color: #3BCCCB">营养补充剂</a>
+                <a href="#here">芦荟</a>
+                <a href="#here">减肥</a>
+                <a href="#here" style="color: #3BCCCB">维生素C</a>
+                <a href="#here" style="color: #3BCCCB"><del>大宝剑</del></a>
+            	<div class="seperator"></div>
+            </div>     
+            <div class="row ">
+            	<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>滋&ensp;补&ensp;品 &gt;</strong></div>
+				<a href="#here" style="color: #3BCCCB">滋补养生</a>
+                <a href="#here">蜂蜜</a>
+                <a href="#here">阿胶</a>
+                <a href="#here" style="color: #3BCCCB">人参</a>
+                <a href="#here">冬虫夏草</a>
+                <a href="#here" style="color: #3BCCCB">蜂王浆</a>
+            	<div class="seperator"></div>
+            </div>    
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>医&emsp;&emsp;药 &gt;</strong></div>
+				<a href="#here">感冒咳嗽</a>
+                <a href="#here" style="color: #3BCCCB">体检套餐</a>
+                <a href="#here">妇科用药</a>
+                <a href="#here">避孕套</a>
+                <a href="#here">成人用品</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>医疗器械 &gt;</strong></div>
+				<a href="#here" style="color: #3BCCCB">制氧机</a>
+                <a href="#here">体温计</a>
+                <a href="#here" style="color: #3BCCCB">轮椅</a>
+                <a href="#here" style="color: #3BCCCB">呼吸机</a>
+                <a href="#here">口罩</a>
+                <a href="#here" style="color: #3BCCCB">血压计</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>隐形眼镜 &gt;</strong></div>
+				<a href="#here" style="color: #3BCCCB">硕士伦</a>
+                <a href="#here">双氧水</a>
+                <a href="#here">日抛</a>
+                <a href="#here">两周抛</a>
+                <a href="#here">月抛</a>
+				<a href="#here" style="color: #3BCCCB">护理液</a>
+            	<div class="seperator"></div>
+            </div> 
+    	</div>
+		<!--cid=15 厨具/收纳/宠物products-->
+        <div class="products red" cid="15" style="position: relative">
+        	<div class="row ">
+        		<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>厨房烹饪 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">锅组套装</a>
+                <a href="#here" style="color: #FF7575">炒锅</a>
+                <a href="#here">高压锅</a>
+                <a href="#here">平底锅</a>
+                <a href="#here">不粘锅</a>
+                <a href="#here" style="color: #FF7575">刀具</a>
+            	<div class="seperator"></div>
+            </div>     
+            <div class="row ">
+            	<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>餐&ensp;饮&ensp;具 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">杯具<div style="background-color: black;color: black;display: inline">悲剧</div>套装</a>
+                <a href="#here">水杯</a>
+                <a href="#here">一次性用品</a>
+                <a href="#here" style="color: #FF7575">餐具</a>
+                <a href="#here">保温饭盒</a>
+            	<div class="seperator"></div>
+            </div>    
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>居家礼品 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">雨伞</a>
+                <a href="#here">挂钟</a>
+                <a href="#here" style="color: #FF7575">口罩</a>
+                <a href="#here">婚庆礼品</a>
+                <a href="#here">驱蚊驱虫</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>收纳清洁 &gt;</strong></div>
+                <a href="#here" style="color: #FF7575">收纳箱</a>
+                <a href="#here">鞋柜</a>
+                <a href="#here">压缩袋</a>
+                <a href="#here" style="color: #FF7575">旋转拖把</a>
+                <a href="#here">垃圾统</a>
+                <a href="#here">梳子</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>纸品清洁 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">软包抽纸</a>
+                <a href="#here">手帕纸</a>
+				<a href="#here" style="color: #FF7575">洗衣液</a>
+				<a href="#here" style="color: #FF7575">洗洁精</a>
+                <a href="#here">驱蚊驱虫</a>
+				<a href="#here" style="color: #FF7575">除甲醛</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>宠物用品 &gt;</strong></div>
+				<a href="#here" style="color: #FF7575">狗粮<div style="background-color: black;color: black;display: inline;">不来一口吗？</div></a>
+                <a href="#here">猫粮</a>
+                <a href="#here">窝/笼</a>
+                <a href="#here" style="color: #FF7575">鱼缸</a>
+                <a href="#here">猫砂</a>
+            	<div class="seperator"></div>
+            </div> 
+    	</div>
+		<!--cid=16 图书音像products-->
+		<div class="products purple" cid="16" style="position: relative">
+        	<div class="row ">
+        		<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>儿童读物 &gt;</strong></div>
+                <a href="#here">畅销童书</a>
+                <a href="#here" style="color: #ca8ec2">绘本</a>
+                <a href="#here" style="color: #ca8ec2">儿童文学</a>
+                <a href="#here">益智游戏</a>
+                <a href="#here" style="color: #ca8ec2">启蒙认知</a>
+            	<div class="seperator"></div>
+            </div>     
+            <div class="row ">
+            	<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>畅销小说 &gt;</strong></div>
+				<a href="#here" style="color: #ca8ec2">都市情感</a>
+                <a href="#here">穿越架空</a>
+				<a href="#here" style="color: #ca8ec2">畅销小说</a>
+                <a href="#here">外国文学</a>
+                <a href="#here">科幻小说</a>
+            	<div class="seperator"></div>
+            </div>    
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>文学文艺 &gt;</strong></div>
+				<a href="#here" style="color: #ca8ec2">畅销书</a>
+                <a href="#here">散文随笔</a>
+                <a href="#here">文学</a>
+                <a href="#here">传记</a>
+                <a href="#here">现当代文学</a>
+				<a href="#here" style="color: #ca8ec2">诺贝尔</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>社科生活 &gt;</strong></div>
+                <a href="#here" style="color: #ca8ec2">烘焙</a>
+                <a href="#here" style="color: #ca8ec2">旅游</a>
+                <a href="#here" style="color: #ca8ec2">菜谱</a>
+				<a href="#here">美容/美体</a>
+                <a href="#here">家居装修</a>
+                <a href="#here" style="color: #ca8ec2">两性</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>育儿百科 &gt;</strong></div>
+				<a href="#here">家庭教育</a>
+                <a href="#here" style="color: #ca8ec2">幼儿情绪管理</a>
+                <a href="#here">能力培养</a>
+                <a href="#here" style="color: #ca8ec2">胎教</a>
+                <a href="#here" style="color: #ca8ec2">孕产妇保健</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>学习考试 &gt;</strong></div>
+				<a href="#here" style="color: #ca8ec2">公务员</a>
+                <a href="#here">托福</a>
+                <a href="#here" style="color: #ca8ec2">建筑师考试</a>
+                <a href="#here">注册会计师</a>
+                <a href="#here" style="color: #ca8ec2">四六级英语</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>教材教辅 &gt;</strong></div>
+                <a href="#here">中学教辅</a>
+                <a href="#here">新课标</a>
+                <a href="#here">中小学作文</a>
+                <a href="#here" style="color: #ca8ec2">本科/研究生教材</a>
+                <a href="#here" style="color: #ca8ec2">外语学习</a>
+            	<div class="seperator"></div>
+            </div>   
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>经管励志 &gt;</strong></div>
+				<a href="#here">管理学</a>
+                <a href="#here">金融与投资</a>
+                <a href="#here">励志</a>
+                <a href="#here">股市</a>
+				<a href="#here" style="color: #ca8ec2">女性励志</a>
+            	<div class="seperator"></div>
+            </div> 
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>大牌乐器 &gt;</strong></div>
+				<a href="#here" style="color: #ca8ec2">钢琴</a>
+                <a href="#here">小提琴</a>
+                <a href="#here" style="color: #ca8ec2">吉他</a>
+                <a href="#here">口琴</a>
+                <a href="#here">古筝</a>
+                <a href="#here" style="color: #ca8ec2">电吉他</a>
+            	<div class="seperator"></div>
+            </div> 
+        </div>
+		<!--cid=17 机器人/人工智能products-->
+        <div class="products blue" cid="17" style="position: relative">
+        	<div class="row ">
+        		<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>生活家居 &gt;</strong></div>
+				<a href="#here" style="color: #97CBFF">扫地机器人</a>
+                <a href="#here">烹饪机器人</a>
+                <a href="#here">聊天机器人<div style="background-color: black;color: black;display: inline">&#40;这是什么鬼？！&#41;</div></a>
+            	<div class="seperator"></div>
+            </div>     
+            <div class="row ">
+            	<div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>战争机器 &gt;</strong></div>
+                <a href="#here" style="color: #97CBFF">NS-5型智能机器人</a>
+                <a href="#here" style="color: #97CBFF">T-800型</a>
+            	<div class="seperator"></div>
+            </div>    
+        	<div class="row ">
+        	    <div class="title" style="width: 80px;text-align:justify;font-size: 14px;margin-top: 16px;margin-left:60px;display: inline-block;"><strong>人工智能 &gt;</strong></div>
+				<div style="color: white;display: inline;margin-left: 5px;">不用找了，这里真的什么都没有</div>
+            	<div class="seperator"></div>
+            </div> 
+        
+	</div>  
+	</div>
+
+	<!--产品列表模块-->
+	<div class="imgTitle"><strong>庆祝七夕，天狗周边大酬宾哦！</strong></div>
+	<div class="tianGouImg">
+		<div style="display: inline-block">
+			<a href="{{url_for('productDTG')}}" target="_blank"><img src="../static/Pictures/大天狗.jpeg" class="daTianGou"></a>
+		</div>
+		<div  style="display: inline-block">
+			<a href="productYaTianGou.html" target="_blank"><img src="../static/Pictures/鸦天狗.jpg" class="yaTianGou"></a>
+		</div>
+		<div  style="display: inline-block">
+			<a href="productNvTianGou.html" target="_blank"><img src="../static/Pictures/女天狗.jpg" class="nvTianGou"></a>
+		</div>
+	</div>
+	
+	<div class="productsListBgc"></div>
+	
+	<!--页脚模块-->
+	<div>
+		<div class="footer1">
+			<div class="footer1Top">
+				<div>
+					<span class="footericon iconfont icon-icon"></span>
+					<div class="footer1Block">
+						<div class="footer1Header">品质保障</div>
+						<div class="footer1Text">品质护航 购物无忧</div>
+					</div>
+				</div>
+				<div>
+					<span class="footericon iconfont icon-qitiantuihuo"></span>
+					<div class="footer1Block">
+						<div class="footer1Header">七天无理由退换货</div>
+						<div class="footer1Text">为您提供售后无忧保障</div>
+					</div>
+				</div>
+				<div>
+					<span class="footericon iconfont icon-icon1460191793239"></span>
+					<div class="footer1Block">
+						<div class="footer1Header">特色服务体验</div>
+						<div class="footer1Text">为您呈现不一样的服务</div>
+					</div>
+				</div>
+				<div>
+					<span class="footericon iconfont icon-bangzhu"></span>
+					<div class="footer1Block">
+						<div class="footer1Header">帮助中心</div>
+						<div class="footer1Text">您的购物指南</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer1Bottom">
+				<div>
+					<p>购物指南</p>
+					<a href="#here">免费注册</a>
+					<a href="#here">关联银行卡</a>
+				</div>
+				<div>
+					<p>天狗保障</p>
+					<a href="#here">发票保障</a>
+					<a href="#here">售后规则</a>
+					<a href="#here">缺货赔付</a>
+				</div>
+				<div>
+					<p>支付方式</p>
+					<a href="#here">快捷支付</a>
+					<a href="#here">信用卡</a>
+					<a href="#here">货到付款</a>
+				</div>
+				<div>
+					<p>商家服务</p>
+					<a href="#here">商家入驻</a>
+					<a href="#here">商家中心</a>
+					<a href="#here">天狗智库</a>
+					<a href="#here">天狗规则</a>
+					<a href="#here">物流服务</a>
+					<a href="#here">运营服务</a>
+				</div>
+				<div>
+					<p>手机天狗</p>
+					<a>敬请期待</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer1Bgc"></div>
+		<div class="footer2">
+			<div class="line1">
+				<a href="#here">关于天狗</a>
+				<a href="#here">帮助中心</a>
+				<a href="#here">开放平台</a>
+				<a href="#here">诚聘英才</a>
+				<a href="#here">联系我们<span>我们也不会回复</span></a>
+				<a href="#here">网站合作</a>
+				<a href="#here">法律声明及隐私权政策</a>
+				<a href="#here"><del>知识产权</del><span>这种东西我们没有</span></a>
+				<a href="#here">廉政举报</a>
+				<a href="#here">规则意见征集<span>我们也不会听</span></a>
+			</div>
+			<div class="line2">
+				<div>增值电信业务经营许可证：<a href="#here"> 浙B2-20110446</a></div>
+				<div>网络文化经营许可证：<a href="#here">浙网文[2015]0295-065号</a></div>
+				<div><a href="#here">12318举报</a></div>
+			</div>
+			<div class="line3">
+				<a href="#here">©2017-2017天狗网版权所有</a>
+			</div>
+		</div>
+		<div class="footer2Bgc"></div>
+	</div>
+</body>
+
+
+</html>

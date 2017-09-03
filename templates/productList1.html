@@ -1,0 +1,1996 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>要网购，来天狗！--天狗商城欢迎您！</title>
+
+
+<script type="text/javascript" src="{{
+  url_for('static', filename='Bootstrap/jquery-3.2.1.min.js') }}"></script>
+<!-- <script src="Bootstrap/jquery-3.2.1.min.js"></script> -->
+<link type="text/css" href="{{
+  url_for('static', filename='Bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css') }}" rel="stylesheet">
+<!-- <link href="Bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet"> -->
+<script type="text/javascript" src="{{
+  url_for('static', filename='Bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js') }}"></script>
+<!-- <script src="Bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script> -->
+<link type="text/css" href="{{
+  url_for('static', filename='icon/font_邮件/iconfont.css') }}" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="icon/font_邮件/iconfont.css"> -->
+<link type="text/css" href="{{
+  url_for('static', filename='icon/font_we0rc7skyj9bpgb9/iconfont.css') }}" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="icon/font_we0rc7skyj9bpgb9/iconfont.css"> -->
+<link type="text/css" href="{{
+  url_for('static', filename='jQuery/jquery-ui-1.12.1.custom/jquery-ui.css') }}" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="jQuery/jquery-ui-1.12.1.custom/jquery-ui.css"> -->
+	
+	
+	<!--顶部导航条模块样式-->
+	<style>
+		@media screen and (min-width: 1200px){
+			.topNavText{
+				max-width: 1200px;
+				margin: auto;
+			}
+			.myGoods{
+				max-width: 1200px;
+			}
+		} 
+		body{
+			font-size: 12px;
+			font-family: Arial;
+		}
+		.topNav {
+			background-color: #F2F2F2;
+			width: 100%;
+			min-width: 1000px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 12px;	
+			font-family: Arial;
+			border-bottom: 1px solid #E7E7E7;
+			color: #999999;
+		}
+		.topNav .topNavBlue{
+				color: #66CCFF;
+			}
+		.topNavText a{
+			text-decoration: none;
+			color: #999999;
+			margin: 0 10px 0 10px;
+		}
+		.leftTopNav{
+			margin: 0 10px 0 10px;
+		}
+		.topNavText a:hover{
+			color: #66ccff;
+			text-decoration: none;
+		}
+		.rightTopNav>div{
+			float: left;
+		}
+		.myGoods,.myFavorite{
+			background-color: white;
+			text-align: center;
+			width: 100px;
+			height: 70px;
+			border: 1px solid #F2F2F2;
+			border-top-color: white;
+		}
+
+	</style>
+	
+	
+	<!--顶部搜索栏样式-->
+	<style>
+		@media screen and (min-width: 1200px){
+			.mainSearch{
+				max-width: 1200px;
+				margin: auto;
+			}
+		}
+		.mainSearch{
+			min-width: 1000px;
+		}
+		.mainSearch img{
+			width: 200px;
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+		.searchBox{
+			background-color: #66CCFF;
+			width: 400px;
+			height: 40px;
+			padding: 2px;
+			margin: -65px 400px;
+			display: block;
+		}
+		.searchBox input{
+			width: 275px;
+			height: 36px;
+			border: 1px solid transparent;
+			outline: none;
+		}
+		.searchBox button{
+			width: 110px;
+			border: 1px solid transparent;
+			background-color: #66CCFF;
+			color: white;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.hotSearch{
+			font-family: Arial;
+			margin-top: 5px;
+			margin-left: -20px;
+		}
+		.hotSearch a{
+			font-size: 14px;
+			padding:0 20px;
+			color: #999999;
+			text-decoration: none;
+		}
+		.hotSearch a:hover{
+			color: #66CCFF;
+		}
+		.hotSearch span{
+			color: #999999;
+		}
+	</style>
+	
+	
+	<!--排序与价格模块样式-->
+	<style>
+		@media screen and (min-width: 1200px){
+			.sortAndPrice{
+				max-width: 1200px;
+				margin: 100px auto 10px auto;
+				position: relative;
+				background-color: #F2F2F2;
+				height: 25px;
+			}
+		}
+		@media screen and (max-width: 1200px){
+			.sortAndPrice{
+				min-width: 1200px;
+				position: relative;
+				margin-top: 100px;
+				background-color: #F2F2F2;
+				height: 25px;
+			}
+		}
+		.sortAndPrice{
+			color: #806F66;
+		}
+		.categorySortBarTable{
+			display: inline-block;
+			border-collapse: collapse;	
+			vertical-align: middle;
+		}
+		.categorySortBarTable span.glyphicon{
+    		font-size: 10px;
+		}
+		.categorySortBarTable td{
+			height:17px;
+			font-size:12px;
+			border:1px solid #CCCCCC;
+			padding:3px;
+		}
+		.gray{
+			background-color: #F1EDEC;
+		}
+		.white{
+			background-color: #FFFFFF;
+		}
+		.categorySortBarTable td a{
+			color: #806F66;
+			text-decoration: none;
+		}
+		.categorySortBarTable td a:hover{
+			color: #66CCFF;
+		}
+		.categorySortBarTable input{
+			border-width: 0px;
+			height: 15px;
+			width: 80px;
+		}
+		.categorySortBarTable td.priceMiddleColumn{
+			width: 5px;
+			vertical-align: middle;
+			color: #CCCCCC;
+		}
+		.categorySortTable td:hover{
+			background-color: #F1EDEC;
+		}
+		td.position{
+			margin: 0;
+			padding: 0;
+		}
+		select{
+			height: 24px;
+			padding: 0px;
+			border: 0;
+			appearance: none;
+			-moz-appearance: none;
+			-webkit-appearance: none;
+		}
+		.searchable-select-hide {
+		  	display: none;
+		}
+		.searchable-select {
+		  	display: inline-block;
+		  	width: 85px;
+		  	font-size: 12px;
+		  	line-height: 24px;
+		  	color: #806F66;
+			text-align: center;
+		  	vertical-align: middle;
+		  	position: relative;
+		  	outline: none;
+		}
+		.searchable-select-holder{
+		  	padding: 0px;
+		  	background-color: #FFFFFF;
+		  	background-image: none;
+		  	border: 0px solid #F2F2F2;
+		  	border-radius: 0px;
+		  	height: 24px;
+		  	box-sizing: border-box;
+		  	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+		  	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+		  	-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .1s;
+		  	transition: border-color ease-in-out .15s,box-shadow ease-in-out .1s;
+		}
+		.searchable-select-dropdown {
+		  	position: absolute;
+		  	background-color: #F2F2F2;
+		  	border: 1px solid #F2F2F2;
+		  	border-bottom-left-radius: 0px;
+		  	border-bottom-right-radius: 0px;
+		  	padding: 0px;
+		  	border-top: none;
+		  	top: 28px;
+		  	left: 0;
+		  	right: 0;
+		}
+		.searchable-select-input {
+		  	border: 1px solid #F2F2F2;
+		  	outline: none;
+		  	padding: 0 5px;
+		  	width: 100%;
+		  	box-sizing: border-box;
+		  	width: 100%;
+		}
+		.searchable-scroll {
+		  	margin-top: 1px;
+		  	position: relative;
+		}
+		.searchable-scroll.has-privious {
+		  	padding-top: 0px;
+		}
+		.searchable-scroll.has-next {
+		  	padding-bottom: 0px;
+		}
+		.searchable-has-privious {
+		  	top: 0;
+		}
+		.searchable-has-next {
+		  	bottom: 0;
+		}
+		.searchable-has-privious, .searchable-has-next {
+		  	height: 16px;
+		  	left: 0;
+		  	right: 0;
+		  	position: absolute;
+		  	text-align: center;
+		  	z-index: 10;
+		  	background-color: #F1EDEC;
+		  	line-height: 8px;
+		  	cursor: pointer;
+		}
+		.searchable-select-items {
+		  	max-height: 300px;
+		  	overflow-y: scroll;
+		  	position: relative;
+		}
+		.searchable-select-items::-webkit-scrollbar {
+		  	display: none;
+		}
+		.searchable-select-item {
+			background-color: #F2F2F2;
+			padding: 1px 3px;
+			cursor: pointer;
+			height: 25px;
+			box-sizing: border-box;
+			transition: all 1s ease 0s;
+		}
+		.searchable-select-item.hover {
+		  	background: #66CCFF;
+		  	color: black;
+		}
+		.searchable-select-item.selected {
+		 	background: #66ccff;
+		  	color: black;
+		}
+		.deliveryAdd{
+			width: 70px;
+			text-align: center;
+		}
+		.filter{
+			width: 150px;
+			padding: 3px;
+			position: relative;
+			margin: -25px 0 0 545px;
+			border: 1px solid #CCCCCC;
+			vertical-align: middle;
+			color: #806F66;
+		}
+		.filter label{
+			display: inline-block;
+			font-weight: normal;
+			height: 18px;
+		}
+		.filter td {
+			padding: 0 4px;
+			height: 24px;
+		}
+		.line2{
+			height: 24px;
+			display: none;
+		}
+		p.more{
+			display: inline-block;
+			float: right;
+		}
+		body{
+			font-size: 12px ;
+			font-family: Arial;
+		}
+	</style>
+	
+	
+	<!--产品列表模块样式-->
+	<style>
+	
+		@media screen and (min-width: 1200px){
+			.productsList {
+				max-width: 1200px;
+			}
+			.page{
+				max-width: 1200px;
+			}
+		}
+		.page{
+			margin: auto;
+			overflow: hidden;
+		}
+		
+		.productList {
+			min-width: 1000px;
+			margin: 5px auto;
+			padding: 0 10px;
+		}
+		
+		.productUnitBorder{
+			width: 225px;
+			height: 395px;
+			border: 3px solid #FFFFFF;
+			float: left;
+			margin: 12px 5px;
+		}
+		
+		.productUnitBorder:hover{
+			border:3px solid #66CCFF;
+		}
+		
+		.productUnit{
+			border: 1px solid #EEEEEE;
+			height: 100%;
+		}
+		
+		.productUnit:hover{
+			border: 1px solid #66CCFF;
+		}
+		
+		.productImg{
+			width: 100%;
+			height: 261px;
+		}
+		
+		.productPrice{
+			font-size: 20px;
+			color: #66CCFF;
+			display: block;
+			padding-top: 5px;
+			padding-left: 5px;
+		}
+		
+		.productLink{
+			margin: 5px 0px;
+    		color: #333333;
+    		display: block;
+    		height:34px;
+		}
+		
+		.productLink:hover{
+			text-decoration: underline;
+			color: #66CCFF;
+		}
+		
+		.sellerLink{
+			margin: 5px 0;
+			color: #333333;
+			display: block;
+			text-decoration: underline;
+		}
+		
+		.sellerLink:hover{
+			color: #66CCFF;
+		}
+		
+		.productInfo{
+			border-top:1px solid #EEEEEE;
+			color: #999999;
+		}
+		
+		.productDealNumber{
+			font-weight: bold;
+			color: #B57C5B;
+		}
+		
+		.productReview{
+			border-left:1px solid #EEEEEE;
+			border-right:1px solid #EEEEEE;
+		}
+			
+		.productReviewNumber{
+			font-weight: bold;
+			color: #3388BB;
+		}	
+		
+		.monthDeal, .productReview{
+			display: inline-block;
+			width: 90px;
+			height: 25px;
+			padding-top: 5px;
+			padding-left: 10px;
+		}
+		
+		.mailLink{
+			padding: 5px;
+			text-decoration: none;
+			color: #999999;
+		}
+		
+		.mailLink:hover{
+			text-decoration: none;
+			color: #66CCFF;
+		}
+		
+		.mailLink:visited,.mailLink:active,.mailLink:link{
+			text-decoration: none;
+		}
+	</style>
+		
+		
+	<!--分页模块样式-->
+	<style>
+		@media screen and (min-width : 1200px){
+			.paginationDiv{
+				width: 1200px;
+			}
+		}
+		
+		.paginationDiv{
+			overflow: hidden;
+			width: 100%;
+			margin: 10px auto 80px auto;
+		}
+		
+		.pages {
+			width:720px;
+			margin:40px auto 0 auto;
+		}
+		
+		.pages #Pagination {
+		  float: left;
+		  overflow: hidden;
+		}
+		
+		.pages #Pagination .pagination {
+		  height: 20px;
+		  text-align: right;
+		  font-family: Arial;
+		}
+		
+		.pages #Pagination .pagination a,
+		.pages #Pagination .pagination span {
+		  float: left;
+		  display: inline;
+		  padding: 11px 13px;
+		  border: 1px solid #e6e6e6;
+		  border-right: none;
+		  background: #F2F2F2;
+		  color: #806F66;
+		  font-family: Arial;
+		  font-size: 12px;
+		  cursor: pointer;
+		}
+		
+		.pages #Pagination .pagination .current {
+		  background: #66CCFF;
+		  color: #FFFFFF;
+		}
+		
+		.pages #Pagination .pagination .prev,
+		.pages #Pagination .pagination .next {
+		  float: left;
+		  padding: 11px 13px;
+		  border: 1px solid #e6e6e6;
+		  background: #F2F2F2;
+		  color: #806F66;
+		  cursor: pointer;
+		}
+		
+		.pages #Pagination .pagination .prev i,
+		.pages #Pagination .pagination .next i {
+		  display: inline-block;
+		  width: 4px;
+		  height: 12px;
+		  margin-right: 5px;
+		}
+		
+		.pages #Pagination .pagination .prev {
+		  border-right: none;
+		}
+		
+		.pages #Pagination .pagination .prev i {
+		  background-position: -144px -1px;
+		  *background-position: -144px -4px;
+		}
+		
+		.pages #Pagination .pagination .next i {
+		  background-position: -156px -1px;
+		  *background-position: -156px -4px;
+		}
+		
+		.pages #Pagination .pagination .pagination-break {
+		  padding: 11px 5px;
+		  border: none;
+		  border-left: 1px solid #F2F2F2;
+		  background: none;
+		  cursor: default;
+		}
+		
+		.pages .searchPage {
+		  	float: left;
+		  	padding: 8px 0;
+			margin-top: 25px;
+		}
+		
+		.pages .searchPage .page-sum {
+		  padding: 11px 13px;
+		  color: #806F66;
+		  font-family: Arial;
+		  font-size: 12px;
+		}
+		
+		.pages .searchPage .page-go {
+		  padding: 8px 0;
+		  color: #806F66;
+		  font-family: Arial;
+		  font-size: 12px;
+		  padding: 10px 0\9;
+		  *padding: 6px 0;
+		}
+		
+		.pages .searchPage .page-go input {
+		  width: 21px;
+		  height: 18px;
+		  margin: 0 5px;
+		  padding-left: 5px;
+		  border: 1px solid #F2F2F2;
+		}
+		
+		.pages .searchPage .page-btn {
+		  margin: 9px 0 5px 5px;
+		  padding: 2px 5px;
+		  background: #66ccff;
+		  border-radius: 2px;
+		  color: #ffffff;
+		  font-family: Arial;
+		  font-size: 12px;
+		  text-decoration: none;
+		}
+	</style>
+	
+	
+	<!--页脚模块样式-->
+	<style>
+		@media screen and (min-width: 1200px){
+			.footer1{
+				width: 1200px;
+				margin: 30px auto;
+			}
+			.footer2{
+				width: 1200px;
+				margin: auto;
+			}
+		}
+		.footer{
+			width: 100%;
+		}
+		.footer1{
+			margin: 30px auto;
+			padding: 0 30px;
+			min-width: 1000px;
+		}
+		.footericon{
+			font-size: 50px;
+			color: #66CCFF;
+		}
+		.footer1Block{
+			display: inline-block;
+		}
+		.footer1Header{
+			font-size: 16px;
+			font-weight: bold;
+			padding: 5px 20px;
+		}
+		.footer1Text{
+			color: #8B8B8B;
+			font-size: 14px;
+			padding:5px 10px 10px 20px;
+		}
+		.footer1Top>div{
+			align-content: center;
+			width: 25%;
+			float: left;
+		}
+		.footer1Top{
+			position: relative;
+			padding-top: 10px;
+			height: 100px;
+			border-bottom: 1px solid #999;
+		}
+		
+		.footer1Bottom>div{
+			float: left;
+			align-content: center;
+			width: 20%;
+		}
+		.footer1Bottom a{
+			width: 60px;
+			color: #8B8B8B;
+			display:block;
+			text-decoration: none;
+		}
+		.footer1 p{
+			margin: 30px auto 5px auto;
+			font-size: 16px;
+			font-weight:bold;
+		}
+		.footer1Bottom{
+			position: relative;
+			height: 200px;
+		}
+		.footer1Bgc{
+			border-top: 1px solid #999;
+			margin-top: -360px;
+			height: 330px;
+		}
+		.footer2Bgc{
+			margin-top: -92px;
+			width: 100%;
+			height: 200px;
+			border-top: 1px solid #66CCFF;
+			background-color: black;
+		}
+		.footer2{
+			min-width: 1000px
+		}
+		.line1{
+			margin: 20px auto 10px auto;
+		}
+		.line1 span{
+			color: black;
+		}
+		.line1 a{
+			padding: 0 5px;
+			text-decoration: none;
+			color: white
+		}
+		.line2{
+			color: #A4A4A4;
+			margin: 10px auto;
+		}
+		.line2 a{
+			color: #A4A4A4;
+			text-decoration: none;
+		}
+		.line2 div{
+			display: inline;
+			padding: 0 5px;
+		}
+		.line3 a {
+			color: #A4A4A4;
+			text-decoration: none;
+			padding: 0 5px;
+		}
+	</style>
+	
+	<!--顶部导航栏模块交互-->
+	<script>
+		$(document).ready(function(){
+			$(".myGoodsMenu").mouseenter(function(){
+				$(".myGoods").animate({
+					height:'toggle'
+				});
+			});
+
+			$(".myGoodsMenu").mouseleave(function(){
+				$(".myGoods").hide();
+			});
+	})
+		$(document).ready(function(){
+			$(".myFavoriteMenu").mouseenter(function(){
+				$(".myFavorite").animate({
+					height:'toggle'
+				});
+			});	
+
+			$(".myFavoriteMenu").mouseleave(function(){
+				$(".myFavorite").hide();
+			});
+	})
+	</script>
+	
+	<script>
+	$(document).ready(function(){
+			$(".more").click(function(){
+				$(".line2").toggle(10);
+				$(this).replace("更多","收起");
+			});
+	})
+	</script>
+	
+	
+	<!--排序与价格模块交互-->
+	<script>
+		(function($){
+			// a case insensitive jQuery :contains selector
+			$.expr[":"].searchableSelectContains = $.expr.createPseudo(function(arg) {
+				return function( elem ) {
+		  			return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+				};
+	  		});
+
+	  		$.searchableSelect = function(element, options) {
+				this.element = element;
+				this.options = options || {};
+				this.init();
+
+				var _this = this;
+
+				this.searchableElement.click(function(event){
+				  // event.stopPropagation();
+				  _this.show();
+				}).on('keydown', function(event){
+				  	if (event.which === 13 || event.which === 40 || event.which == 38){
+						event.preventDefault();
+						_this.show();
+				  	}
+				});
+
+				$(document).on('click', null, function(event){
+		  			if(_this.searchableElement.has($(event.target)).length === 0)
+						_this.hide();
+				});
+				this.input.on('keydown', function(event){
+		  			event.stopPropagation();
+					if(event.which === 13){         //enter
+						event.preventDefault();
+						_this.selectCurrentHoverItem();
+						_this.hide();
+		  			} else if (event.which == 27) { //ese
+						_this.hide();
+		  			} else if (event.which == 40) { //down
+						_this.hoverNextItem();
+		  			} else if (event.which == 38) { //up
+						_this.hoverPreviousItem();
+		  			}
+				}).on('keyup', function(event){
+		  			if(event.which != 13 && event.which != 27 && event.which != 38 && event.which != 40)
+						_this.filter();
+				})
+	  		}
+	  		var $sS = $.searchableSelect;
+	  		$sS.fn = $sS.prototype = {
+				version: '0.0.1'
+	  		};
+	  		$sS.fn.extend = $sS.extend = $.extend;
+	  		$sS.fn.extend({
+				init: function(){
+		  			var _this = this;
+		  			this.element.hide();
+		  			this.searchableElement = $('<div tabindex="0" class="searchable-select"></div>');
+		  			this.holder = $('<div class="searchable-select-holder"></div>');
+		  			this.dropdown = $('<div class="searchable-select-dropdown searchable-select-hide"></div>');
+		  			this.input = $('<input type="text" class="searchable-select-input" />');
+		  			this.items = $('<div class="searchable-select-items"></div>');
+		  			this.caret = $('<span class="searchable-select-caret"></span>');
+		  			this.scrollPart = $('<div class="searchable-scroll"></div>');
+		  			this.hasPrivious = $('<div class="searchable-has-privious">...</div>');
+		  			this.hasNext = $('<div class="searchable-has-next">...</div>');
+		  			this.hasNext.on('mouseenter', function(){
+						_this.hasNextTimer = null;
+						var f = function(){
+							var scrollTop = _this.items.scrollTop();
+							_this.items.scrollTop(scrollTop + 20);
+							_this.hasNextTimer = setTimeout(f, 50);
+						}
+						f();
+		  			}).on('mouseleave', function(event) {
+						clearTimeout(_this.hasNextTimer);
+		  			});
+
+		  			this.hasPrivious.on('mouseenter', function(){
+						_this.hasPriviousTimer = null;
+						var f = function(){
+			  				var scrollTop = _this.items.scrollTop();
+			  				_this.items.scrollTop(scrollTop - 20);
+			  				_this.hasPriviousTimer = setTimeout(f, 50);
+						}
+						f();
+		  			}).on('mouseleave', function(event) {
+						clearTimeout(_this.hasPriviousTimer);
+		  			});
+		  			this.dropdown.append(this.input);
+		  			this.dropdown.append(this.scrollPart);
+		  			this.scrollPart.append(this.hasPrivious);
+		  			this.scrollPart.append(this.items);
+		  			this.scrollPart.append(this.hasNext);
+		  			this.searchableElement.append(this.caret);
+		  			this.searchableElement.append(this.holder);
+		  			this.searchableElement.append(this.dropdown);
+		  			this.element.after(this.searchableElement);
+		  			this.buildItems();
+		  			this.setPriviousAndNextVisibility();
+				},
+
+				filter: function(){
+		  			var text = this.input.val();
+		  			this.items.find('.searchable-select-item').addClass('searchable-select-hide');
+		  			this.items.find('.searchable-select-item:searchableSelectContains('+text+')').removeClass('searchable-select-hide');
+		  			if(this.currentSelectedItem.hasClass('searchable-select-hide') && this.items.find('.searchable-select-item:not(.searchable-select-hide)').length > 0){
+						this.hoverFirstNotHideItem();
+		  			}
+		  			this.setPriviousAndNextVisibility();
+				},
+
+				hoverFirstNotHideItem: function(){
+		  			this.hoverItem(this.items.find('.searchable-select-item:not(.searchable-select-hide)').first());
+				},
+
+				selectCurrentHoverItem: function(){
+		  			if(!this.currentHoverItem.hasClass('searchable-select-hide'))
+						this.selectItem(this.currentHoverItem);
+				},
+
+				hoverPreviousItem: function(){
+		  			if(!this.hasCurrentHoverItem())
+						this.hoverFirstNotHideItem();
+		  			else{
+						var prevItem = this.currentHoverItem.prevAll('.searchable-select-item:not(.searchable-select-hide):first')
+						if(prevItem.length > 0)
+			  				this.hoverItem(prevItem);
+		  			}
+				},
+
+				hoverNextItem: function(){
+		  			if(!this.hasCurrentHoverItem())
+						this.hoverFirstNotHideItem();
+		  			else{
+						var nextItem = this.currentHoverItem.nextAll('.searchable-select-item:not(.searchable-select-hide):first')
+						if(nextItem.length > 0)
+			  				this.hoverItem(nextItem);
+		  			}
+				},
+
+				buildItems: function(){
+		  			var _this = this;
+		  			this.element.find('option').each(function(){
+						var item = $('<div class="searchable-select-item" data-value="'+$(this).attr('value')+'">'+$(this).text()+'</div>');
+						if(this.selected){
+			  				_this.selectItem(item);
+			  				_this.hoverItem(item);
+						}
+
+						item.on('mouseenter', function(){
+			  				$(this).addClass('hover');
+						}).on('mouseleave', function(){
+			  				$(this).removeClass('hover');
+						}).click(function(event){
+			  				event.stopPropagation();
+			  				_this.selectItem($(this));
+			  				_this.hide();
+						});
+
+						_this.items.append(item);
+		  			});
+
+		  			this.items.on('scroll', function(){
+						_this.setPriviousAndNextVisibility();
+		  			})
+				},
+				
+				show: function(){
+		  			this.dropdown.removeClass('searchable-select-hide');
+		  			this.input.focus();
+		  			this.status = 'show';
+		  			this.setPriviousAndNextVisibility();
+				},
+
+				hide: function(){
+		  			if(!(this.status === 'show'))
+						return;
+		  			if(this.items.find(':not(.searchable-select-hide)').length === 0)
+			  			this.input.val('');
+		  			this.dropdown.addClass('searchable-select-hide');
+		  			this.searchableElement.trigger('focus');
+		  			this.status = 'hide';
+				},
+
+				hasCurrentSelectedItem: function(){
+		  			return this.currentSelectedItem && this.currentSelectedItem.length > 0;
+				},
+
+				selectItem: function(item){
+		  			if(this.hasCurrentSelectedItem())
+						this.currentSelectedItem.removeClass('selected');
+					
+		  			this.currentSelectedItem = item;
+		  			item.addClass('selected');
+		  			this.hoverItem(item);
+		  			this.holder.text(item.text());
+		  			var value = item.data('value');
+		  			this.holder.data('value', value);
+		  			this.element.val(value);
+
+		  			if(this.options.afterSelectItem){
+						this.options.afterSelectItem.apply(this);
+		  			}
+				},
+
+				hasCurrentHoverItem: function(){
+		  			return this.currentHoverItem && this.currentHoverItem.length > 0;
+				},
+
+				hoverItem: function(item){
+		  			if(this.hasCurrentHoverItem())
+					this.currentHoverItem.removeClass('hover');
+
+					if(item.outerHeight() + item.position().top > this.items.height())
+						this.items.scrollTop(this.items.scrollTop() + item.outerHeight() + item.position().top - this.items.height());
+					else if(item.position().top < 0)
+						this.items.scrollTop(this.items.scrollTop() + item.position().top);
+
+		  			this.currentHoverItem = item;
+		  			item.addClass('hover');
+				},
+
+				setPriviousAndNextVisibility: function(){
+					if(this.items.scrollTop() === 0){
+						this.hasPrivious.addClass('searchable-select-hide');
+						this.scrollPart.removeClass('has-privious');
+					} else {
+						this.hasPrivious.removeClass('searchable-select-hide');
+						this.scrollPart.addClass('has-privious');
+					}
+
+					if(this.items.scrollTop() + this.items.innerHeight() >= this.items[0].scrollHeight){
+						this.hasNext.addClass('searchable-select-hide');
+						this.scrollPart.removeClass('has-next');
+					} else {
+						this.hasNext.removeClass('searchable-select-hide');
+						this.scrollPart.addClass('has-next');
+					}
+				}
+			});
+
+			$.fn.searchableSelect = function(options){
+				this.each(function(){
+					var sS = new $sS($(this), options);
+				});
+				return this;
+	  		};
+		})(jQuery);	
+	</script>
+	
+	
+	<!--分页模块互动-->
+	<script>
+
+		 (function($){
+			/**
+			 * @class Class for calculating pagination values
+			 */
+			$.PaginationCalculator = function(maxentries, opts) {
+				this.maxentries = maxentries;
+				this.opts = opts;
+			}
+
+			$.extend($.PaginationCalculator.prototype, {
+				/**
+				 * Calculate the maximum number of pages
+				 * @method
+				 * @returns {Number}
+				 */
+				numPages:function() {
+					return Math.ceil(this.maxentries/this.opts.items_per_page);
+				},
+				/**
+				 * Calculate start and end point of pagination links depending on 
+				 * current_page and num_display_entries.
+				 * @returns {Array}
+				 */
+				getInterval:function(current_page)  {
+					var ne_half = Math.floor(this.opts.num_display_entries/2);
+					var np = this.numPages();
+					var upper_limit = np - this.opts.num_display_entries;
+					var start = current_page > ne_half ? Math.max( Math.min(current_page - ne_half, upper_limit), 0 ) : 0;
+					var end = current_page > ne_half?Math.min(current_page+ne_half + (this.opts.num_display_entries % 2), np):Math.min(this.opts.num_display_entries, np);
+					return {start:start, end:end};
+				}
+			});
+
+			// Initialize jQuery object container for pagination renderers
+			$.PaginationRenderers = {}
+
+			/**
+			 * @class Default renderer for rendering pagination links
+			 */
+			$.PaginationRenderers.defaultRenderer = function(maxentries, opts) {
+				this.maxentries = maxentries;
+				this.opts = opts;
+				this.pc = new $.PaginationCalculator(maxentries, opts);
+			}
+			$.extend($.PaginationRenderers.defaultRenderer.prototype, {
+				/**
+				 * Helper function for generating a single link (or a span tag if it's the current page)
+				 * @param {Number} page_id The page id for the new item
+				 * @param {Number} current_page 
+				 * @param {Object} appendopts Options for the new item: text and classes
+				 * @returns {jQuery} jQuery object containing the link
+				 */
+				createLink:function(page_id, current_page, appendopts){
+					var lnk, np = this.pc.numPages();
+					page_id = page_id<0?0:(page_id<np?page_id:np-1); // Normalize page id to sane value
+					appendopts = $.extend({text:page_id+1, classes:""}, appendopts||{});
+					if(page_id == current_page){
+						lnk = $("<a class='current'>" + appendopts.text + "</a>");
+					}
+					else
+					{
+						lnk = $("<a>" + appendopts.text + "</a>")
+							.attr('href', this.opts.link_to.replace(/__id__/,page_id));
+					}
+					if(appendopts.classes){ lnk.addClass(appendopts.classes); }
+					lnk.data('page_id', page_id);
+					return lnk;
+				},
+				// Generate a range of numeric links 
+				appendRange:function(container, current_page, start, end, opts) {
+					var i;
+					for(i=start; i<end; i++) {
+						this.createLink(i, current_page, opts).appendTo(container);
+					}
+				},
+				getLinks:function(current_page, eventHandler) {
+					var begin, end,
+						interval = this.pc.getInterval(current_page),
+						np = this.pc.numPages(),
+						fragment = $("<div class='pagination'></div>");
+
+					// Generate "Previous"-Link
+					if(this.opts.prev_text && (current_page > 0 || this.opts.prev_show_always)){
+						fragment.append(this.createLink(current_page-1, current_page, {text:this.opts.prev_text, classes:"prev"}));
+					}
+					// Generate starting points
+					if (interval.start > 0 && this.opts.num_edge_entries > 0)
+					{
+						end = Math.min(this.opts.num_edge_entries, interval.start);
+						this.appendRange(fragment, current_page, 0, end, {classes:'sp'});
+						if(this.opts.num_edge_entries < interval.start && this.opts.ellipse_text)
+						{
+							$("<span class='pagination-break'>"+this.opts.ellipse_text+"</span>").appendTo(fragment);
+						}
+					}
+					// Generate interval links
+					this.appendRange(fragment, current_page, interval.start, interval.end);
+					// Generate ending points
+					if (interval.end < np && this.opts.num_edge_entries > 0)
+					{
+						if(np-this.opts.num_edge_entries > interval.end && this.opts.ellipse_text)
+						{
+							$("<span class='pagination-break'>"+this.opts.ellipse_text+"</span>").appendTo(fragment);
+						}
+						begin = Math.max(np-this.opts.num_edge_entries, interval.end);
+						this.appendRange(fragment, current_page, begin, np, {classes:'ep'});
+
+					}
+					// Generate "Next"-Link
+					if(this.opts.next_text && (current_page < np-1 || this.opts.next_show_always)){
+						fragment.append(this.createLink(current_page+1, current_page, {text:this.opts.next_text, classes:"next"}));
+					}
+					$('a', fragment).click(eventHandler);
+					return fragment;
+				}
+			});
+
+			// Extend jQuery
+			$.fn.pagination = function(maxentries, opts){
+
+				// Initialize options with default values
+				opts = $.extend({
+					items_per_page:1,
+					num_display_entries:4,
+					current_page:0,
+					num_edge_entries:1,
+					link_to:"#",
+					prev_text:"<i></i>上一页",
+					next_text:"下一页 <i></i>",
+					ellipse_text:"...",
+					prev_show_always:true,
+					next_show_always:true,
+					renderer:"defaultRenderer",
+					show_if_single_page:false,
+					load_first_page:false,
+					callback:function(){return false;}
+				},opts||{});
+
+				var containers = this,
+					renderer, links, current_page;
+
+				//goto
+			$(".page-btn").one("click",function(){
+				var allPage = $(".allPage").text();
+				//console.log(allPage);
+			  var goPage = $(".page-go input").val() - 1; //跳转页数
+			  if(goPage > -1 && goPage < allPage){
+						opts.current_page = goPage;
+				$("#Pagination").pagination(allPage,opts);
+			  }else {
+				$("#Pagination").pagination(allPage);
+			  }
+			  //清空用户跳转页数
+			  $(".page-go input").val("");
+			});
+
+				/**
+				 * This is the event handling function for the pagination links. 
+				 * @param {int} page_id The new page number
+				 */
+				function paginationClickHandler(evt){
+					var links, 
+						new_current_page = $(evt.target).data('page_id'),
+						continuePropagation = selectPage(new_current_page);
+					if (!continuePropagation) {
+						evt.stopPropagation();
+					}
+					return continuePropagation;
+				}
+
+				/**
+				 * This is a utility function for the internal event handlers. 
+				 * It sets the new current page on the pagination container objects, 
+				 * generates a new HTMl fragment for the pagination links and calls
+				 * the callback function.
+				 */
+				function selectPage(new_current_page) {
+					// update the link display of a all containers
+					containers.data('current_page', new_current_page);
+					links = renderer.getLinks(new_current_page, paginationClickHandler);
+					containers.empty();
+					links.appendTo(containers);
+					// call the callback and propagate the event if it does not return false
+					var continuePropagation = opts.callback(new_current_page, containers);
+					return continuePropagation;
+				}
+
+				// -----------------------------------
+				// Initialize containers
+				// -----------------------------------
+						current_page = parseInt(opts.current_page);
+				containers.data('current_page', current_page);
+				// Create a sane value for maxentries and items_per_page
+				maxentries = (!maxentries || maxentries < 0)?1:maxentries;
+				opts.items_per_page = (!opts.items_per_page || opts.items_per_page < 0)?1:opts.items_per_page;
+
+				if(!$.PaginationRenderers[opts.renderer])
+				{
+					throw new ReferenceError("Pagination renderer '" + opts.renderer + "' was not found in jQuery.PaginationRenderers object.");
+				}
+				renderer = new $.PaginationRenderers[opts.renderer](maxentries, opts);
+
+				// Attach control events to the DOM elements
+				var pc = new $.PaginationCalculator(maxentries, opts);
+				var np = pc.numPages();
+				containers.bind('setPage', {numPages:np}, function(evt, page_id) { 
+						if(page_id >= 0 && page_id < evt.data.numPages) {
+							selectPage(page_id); return false;
+						}
+				});
+				containers.bind('prevPage', function(evt){
+						var current_page = $(this).data('current_page');
+						if (current_page > 0) {
+							selectPage(current_page - 1);
+						}
+						return false;
+				});
+				containers.bind('nextPage', {numPages:np}, function(evt){
+						var current_page = $(this).data('current_page');
+						if(current_page < evt.data.numPages - 1) {
+							selectPage(current_page + 1);
+						}
+						return false;
+				});
+
+				// When all initialisation is done, draw the links
+				links = renderer.getLinks(current_page, paginationClickHandler);
+				containers.empty();
+				if(np > 1 || opts.show_if_single_page) {
+					links.appendTo(containers);
+				}
+				// call callback function
+				if(opts.load_first_page) {
+					opts.callback(current_page, containers);
+				}
+			} // End of $.fn.pagination block
+
+		})(jQuery);
+
+	</script>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#Pagination").pagination("10");
+		});
+</script>
+</head>
+
+<body>
+
+
+	<!--顶部导航条模块-->
+	<nav class="topNav">
+		<div class="topNavText">
+			<span class="leftTopNav">汪，欢迎来到天狗商城！</span>
+			<a id="if_loggedin"></a>
+			<a id="log_out" href="{{url_for('logout')}}">注销</a>
+			<a id="register" href="{{url_for('register')}}" >注册</a>
+			<script type="text/javascript">
+				var data = {{ usr_info|tojson }};
+				var JSONObject = JSON.parse(data);
+				var ui_logout = document.getElementById("log_out")
+				var ui_login = document.getElementById("if_loggedin")
+				var ui_register = document.getElementById("register")
+				if(JSONObject['usrname']=='not_logged_in'){
+					ui_logout.style.display="none";
+					ui_login.innerHTML = "请登录";
+					ui_login.href = "{{url_for('logIn')}}";
+				}
+				else{
+					ui_login.innerHTML = JSONObject['usrname'];
+					ui_register.style.display="none";
+				}
+			</script>
+			<span class="rightTopNav pull-right">
+				<div class="myGoodsMenu"><a href="#个人菜单">我的宝贝<span class="ui-icon ui-icon-triangle-1-s"></span></a>
+					<div class="myGoods" style="position:absolute; display: none">
+						<a href="#here">已买到的宝贝</a>
+						<a href="#here">已卖出的宝贝</a>
+					</div>
+				</div>
+				
+				<div><a href="#我喜欢的宝贝"><span class="ui-icon ui-icon-heart"></span> 我关注的品牌</a></div>
+				<div><a href="#购物车"><span class="iconfont icon-gouwuche topNavBlue"></span>购物车<strong>0</strong>件</a></div>
+				<div  class="myFavoriteMenu"><a href="#我喜欢的宝贝">收藏夹<span class="ui-icon ui-icon-triangle-1-s"></span></a>
+					<div class="myFavorite" style="position:absolute; display: none">
+						<a href="#here">收藏的宝贝</a>
+						<a href="#here">收藏的店铺</a>
+					</div>
+				</div>
+				
+			</span>
+		</div>
+	</nav>
+	
+	
+	<!--顶部搜索栏模块-->
+	<div class="mainSearch">
+			<!-- <a href="homePage.html"><img src="Pictures/logo.jpg"></a> -->
+			<a href="{{url_for('show_index')}}"><img src="{{
+  url_for('static', filename='Pictures/logo.jpg') }}"></a>
+		<div class="searchBox">
+			<input type="text" placeholder="如何干死猫？">
+			<button class="searchBtn" type="submit" onclick="window.open('productList.html')">天狗GO</button>
+			<div class="hotSearch">
+				<span> 
+					<a href="#"> 二手东 </a> 
+					<span>|</span>
+				</span> 
+				<span> 
+					<a href="#"> 假货宝 </a> 
+					<span>|</span>
+				</span> 
+				<span> 
+					<a href="#"> 要网购 </a> 
+					<span>|</span>
+				</span>
+				<span> 
+					<a href="#"> 来天狗 </a>
+				</span>	
+			</div>
+		</div>
+	</div>
+	
+	
+	<!--排序与价格模块-->
+	<div class="sortAndPrice">
+		<table class="categorySortBarTable categorySortTable">
+			<tbody>
+				<tr>
+					<td class="gray"><a href="#nowhere">综合<span class="glyphicon glyphicon-arrow-down"></span></a></td>
+					<td class="white"><a href="#nowhere">人气<span class="glyphicon glyphicon-arrow-down"></span></a></td>
+					<td class="white"><a href="#nowhere">新品<span class="glyphicon glyphicon-arrow-down"></span></a></td>
+					<td class="white"><a href="#nowhere">销量<span class="glyphicon glyphicon-arrow-down"></span></a></td>
+					<td class="white"><a href="#nowhere">价格<span class="glyphicon glyphicon-resize-vertical"></span></a></td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="categorySortBarTable">
+			<tbody>
+				<tr>
+					<td class="gray">发货地：</td>
+					<td class="position">
+						<select class="position">
+							<option value="北京市">北京</option>
+							<option value="安徽">安徽</option>
+							<option value="重庆">重庆</option>
+							<option value="福建">福建</option>
+							<option value="甘肃">甘肃</option>
+							<option value="广东">广东</option>
+							<option value="广西">广西</option>
+							<option value="贵州">贵州</option>
+							<option value="海南">海南</option>
+							<option value="河北">河北</option>
+							<option value="黑龙江">黑龙江</option>
+							<option value="河南">河南</option>
+							<option value="湖北">湖北</option>
+							<option value="湖南">湖南</option>
+							<option value="江苏">江苏</option>
+							<option value="江西">江西</option>
+							<option value="吉林">吉林</option>
+							<option value="辽宁">辽宁</option>
+							<option value="内蒙古">内蒙古</option>
+							<option value="宁夏">宁夏</option>
+							<option value="青海">青海</option>
+							<option value="陕西">陕西</option>
+							<option value="山东">山东</option>
+							<option value="上海">上海</option>
+							<option value="山西">山西</option>
+							<option value="四川">四川</option>
+							<option value="天津">天津</option>
+							<option value="新疆">新疆</option>
+							<option value="西藏">西藏</option>
+							<option value="云南">云南</option>
+							<option value="浙江">浙江</option>
+						</select>
+						<script>
+							$(function(){
+								$('select').searchableSelect();
+							});
+						</script>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="categorySortBarTable">
+			<tbody>
+           		<tr>
+					<td><input type="text" placeholder="请输入" class="sortBarPrice beginPrice"></td>
+					<td class="grayColumn priceMiddleColumn">-</td>
+					<td><input type="text" placeholder="请输入" class="sortBarPrice endPrice"></td>
+       		 	</tr>
+    		</tbody>
+		</table>
+		<table class="white filter">
+				<tr class="line1">
+					<td><label><input name="filter" type="checkbox">包邮</label></td>
+					<td><label><input name="filter" type="checkbox">折扣商品</label></td>
+					<td class="more" style="-moz-user-select: none;">更多</td>
+				</tr>
+				<tr class="line2">
+					<td><label><input name="filter" type="checkbox">满减</label></td>
+					<td><label><input name="filter" type="checkbox">货到付款</label></td>
+				</tr>
+		</table>
+	</div>
+	
+	
+	<!--产品列表模块-->
+	<div class="page" style="display: block">
+		<div class="productList">
+			<div price="518" class="productUnitBorder">
+        	    <div class="productUnit">
+        	        <a href="#nowhere">
+        	            <img id="img1" src="{{
+  url_for('static', filename='pictures/productImg1.jpg') }}" class="productImg" alt="产品样例">
+        	        </a>
+        	        <span id="price1" class="productPrice">¥518.00</span>
+        	        <a id="name1" href="#nowhere" class="productLink">
+        	         	GSC 路人女主的养成方法 霞之丘诗羽 学姐 泳装 手办 （倾家荡产押学姐！）
+        	        </a>
+        	        <a href="#nowhere" class="sellerLink">天狗手办专卖店</a>
+        	        <div class="show1 productInfo">
+        	            <span class="monthDeal">月成交 <span class="productDealNumber">16笔</span></span>
+            	        <span id="numReview1" class="productReview">评价<span class="productReviewNumber">14</span></span>
+            	        <span class="mail">
+							<a href="#nowhere" class="mailLink" title="联系卖家">
+								<span class="iconfont icon-youjian"></span>
+							</a>
+            	        </span>
+           	     	</div>
+           	 	</div>
+        	</div>
+        	
+        	<div price="1337" class="productUnitBorder">
+        	    <div class="productUnit">
+        	        <a href="#nowhere">
+        	            <img src="{{
+  url_for('static', filename='pictures/productImg2.jpg') }}" class="productImg" alt="产品样例">
+        	        </a>
+        	        <span class="productPrice">¥1337.00</span>
+        	        <a href="#nowhere" class="productLink">
+        	         	FERRing 初音未来 S-style 1/12 泳装水着日版手办 (Mikuだいすきです)
+        	        </a>
+        	        <a href="#nowhere" class="sellerLink">天狗手办专卖店</a>
+        	        <div class="show1 productInfo">
+        	            <span class="monthDeal">月成交 <span class="productDealNumber">3笔</span></span>
+            	        <span class="productReview">评价<span class="productReviewNumber">2</span></span>
+            	        <span class="mail">
+							<a href="#nowhere" class="mailLink" title="联系卖家">
+								<span class="iconfont icon-youjian"></span>
+							</a>
+            	        </span>
+           	     	</div>
+           	 	</div>
+        	</div>
+        	
+        	<div price="1079" class="productUnitBorder">
+        	    <div class="productUnit">
+        	        <a href="#nowhere">
+        	            <img src="{{
+  url_for('static', filename='pictures/productImg3.jpg') }}" class="productImg" alt="产品样例">
+        	        </a>
+        	        <span class="productPrice">¥1079.00</span>
+        	        <a href="#nowhere" class="productLink">
+        	         	京都限定版 冰菓 千反田爱瑠 睡衣 1/6
+        	        </a>
+        	        <a href="#nowhere" class="sellerLink">天狗手办专卖店</a>
+        	        <div class="show1 productInfo">
+        	            <span class="monthDeal">月成交 <span class="productDealNumber">133笔</span></span>
+            	        <span class="productReview">评价<span class="productReviewNumber">82</span></span>
+            	        <span class="mail">
+							<a href="#nowhere" class="mailLink" title="联系卖家">
+								<span class="iconfont icon-youjian"></span>
+							</a>
+            	        </span>
+           	     	</div>
+           	 	</div>
+        	</div>
+        	
+        	<div price="788" class="productUnitBorder">
+        	    <div class="productUnit">
+        	        <a href="#nowhere">
+        	            <img src="{{
+  url_for('static', filename='pictures/productImg4.jpg') }}" class="productImg" alt="产品样例">
+        	        </a>
+        	        <span class="productPrice">¥788.00</span>
+        	        <a href="#nowhere" class="productLink">
+        	         	Aniplex 路人女主的养成方法 加藤惠 和服手办 1/8
+        	        </a>
+        	        <a href="#nowhere" class="sellerLink">天狗手办专卖店</a>
+        	        <div class="show1 productInfo">
+        	            <span class="monthDeal">月成交 <span class="productDealNumber">20笔</span></span>
+            	        <span class="productReview">评价<span class="productReviewNumber">14</span></span>
+            	        <span class="mail">
+							<a href="#nowhere" class="mailLink" title="联系卖家">
+								<span class="iconfont icon-youjian"></span>
+							</a>
+            	        </span>
+           	     	</div>
+           	 	</div>
+        	</div>
+        	
+        	<div price="1086" class="productUnitBorder">
+        	    <div class="productUnit">
+        	        <a href="#nowhere">
+        	            <img src="{{
+  url_for('static', filename='pictures/productImg5.jpg') }}" class="productImg" alt="产品样例">
+        	        </a>
+        	        <span class="productPrice">¥1086.00</span>
+        	        <a href="#nowhere" class="productLink">
+        	         	GSC Saber lily 1/7 遥远的理想乡
+        	        </a>
+        	        <a href="#nowhere" class="sellerLink">天狗手办专卖店</a>
+        	        <div class="show1 productInfo">
+        	            <span class="monthDeal">月成交 <span class="productDealNumber">8笔</span></span>
+            	        <span class="productReview">评价<span class="productReviewNumber">3</span></span>
+            	        <span class="mail">
+							<a href="#nowhere" class="mailLink" title="联系卖家">
+								<span class="iconfont icon-youjian"></span>
+							</a>
+            	        </span>
+           	     	</div>
+           	 	</div>
+        	</div>
+        	
+        	<div price="888.88" class="productUnitBorder">
+        	    <div class="productUnit">
+        	        <a href="#nowhere">
+        	            <img src="{{
+  url_for('static', filename='pictures/productImg6.jpg') }}" class="productImg" alt="产品样例">
+        	        </a>
+        	        <span class="productPrice">¥888.88</span>
+        	        <a href="#nowhere" class="productLink">
+        	         	Sample
+        	        </a>
+        	        <a href="#nowhere" class="sellerLink">Store</a>
+        	        <div class="show1 productInfo">
+        	            <span class="monthDeal">月成交 <span class="productDealNumber"> - 笔</span></span>
+            	        <span class="productReview">评价<span class="productReviewNumber">-</span></span>
+            	        <span class="mail">
+							<a href="#nowhere" class="mailLink" title="联系卖家">
+								<span class="iconfont icon-youjian"></span>
+							</a>
+            	        </span>
+           	     	</div>
+           	 	</div>
+        	</div>
+        	
+        	<div price="888.88" class="productUnitBorder">
+        	    <div class="productUnit">
+        	        <a href="#nowhere">
+        	            <img src="{{
+  url_for('static', filename='pictures/productImg6.jpg') }}" class="productImg" alt="产品样例">
+        	        </a>
+        	        <span class="productPrice">¥888.88</span>
+        	        <a href="#nowhere" class="productLink">
+        	         	Sample
+        	        </a>
+        	        <a href="#nowhere" class="sellerLink">Store</a>
+        	        <div class="show1 productInfo">
+        	            <span class="monthDeal">月成交 <span class="productDealNumber"> - 笔</span></span>
+            	        <span class="productReview">评价<span class="productReviewNumber">-</span></span>
+            	        <span class="mail">
+							<a href="#nowhere" class="mailLink" title="联系卖家">
+								<span class="iconfont icon-youjian"></span>
+							</a>
+            	        </span>
+           	     	</div>
+           	 	</div>
+        	</div>
+        	
+        	<div price="888.88" class="productUnitBorder">
+        	    <div class="productUnit">
+        	        <a href="#nowhere">
+        	            <img src="{{
+  url_for('static', filename='pictures/productImg6.jpg') }}" class="productImg" alt="产品样例">
+        	        </a>
+        	        <span class="productPrice">¥888.88</span>
+        	        <a href="#nowhere" class="productLink">
+        	         	Sample
+        	        </a>
+        	        <a href="#nowhere" class="sellerLink">Store</a>
+        	        <div class="show1 productInfo">
+        	            <span class="monthDeal">月成交 <span class="productDealNumber"> - 笔</span></span>
+            	        <span class="productReview">评价<span class="productReviewNumber">-</span></span>
+            	        <span class="mail">
+							<a href="#nowhere" class="mailLink" title="联系卖家">
+								<span class="iconfont icon-youjian"></span>
+							</a>
+            	        </span>
+           	     	</div>
+           	 	</div>
+        	</div>
+        	
+        	<div price="888.88" class="productUnitBorder">
+        	    <div class="productUnit">
+        	        <a href="#nowhere">
+        	            <img src="{{
+  url_for('static', filename='pictures/productImg6.jpg') }}" class="productImg" alt="产品样例">
+        	        </a>
+        	        <span class="productPrice">¥888.88</span>
+        	        <a href="#nowhere" class="productLink">
+        	         	Sample
+        	        </a>
+        	        <a href="#nowhere" class="sellerLink">Store</a>
+        	        <div class="show1 productInfo">
+        	            <span class="monthDeal">月成交 <span class="productDealNumber"> - 笔</span></span>
+            	        <span class="productReview">评价<span class="productReviewNumber">-</span></span>
+            	        <span class="mail">
+							<a href="#nowhere" class="mailLink" title="联系卖家">
+								<span class="iconfont icon-youjian"></span>
+							</a>
+            	        </span>
+           	     	</div>
+           	 	</div>
+        	</div>
+        	
+        	<div price="888.88" class="productUnitBorder">
+        	    <div class="productUnit">
+        	        <a href="#nowhere">
+        	            <img src="{{
+  url_for('static', filename='pictures/productImg6.jpg') }}" class="productImg" alt="产品样例">
+        	        </a>
+        	        <span class="productPrice">¥888.88</span>
+        	        <a href="#nowhere" class="productLink">
+        	         	Sample
+        	        </a>
+        	        <a href="#nowhere" class="sellerLink">Store</a>
+        	        <div class="show1 productInfo">
+        	            <span class="monthDeal">月成交 <span class="productDealNumber"> - 笔</span></span>
+            	        <span class="productReview">评价<span class="productReviewNumber">-</span></span>
+            	        <span class="mail">
+							<a href="#nowhere" class="mailLink" title="联系卖家">
+								<span class="iconfont icon-youjian"></span>
+							</a>
+            	        </span>
+           	     	</div>
+           	 	</div>
+        	</div>
+        	
+        	<div price="888.88" class="productUnitBorder">
+        	    <div class="productUnit">
+        	        <a href="#nowhere">
+        	            <img src="{{
+  url_for('static', filename='pictures/productImg6.jpg') }}" class="productImg" alt="产品样例">
+        	        </a>
+        	        <span class="productPrice">¥888.88</span>
+        	        <a href="#nowhere" class="productLink">
+        	         	Sample
+        	        </a>
+        	        <a href="#nowhere" class="sellerLink">Store</a>
+        	        <div class="show1 productInfo">
+        	            <span class="monthDeal">月成交 <span class="productDealNumber"> - 笔</span></span>
+            	        <span class="productReview">评价<span class="productReviewNumber">-</span></span>
+            	        <span class="mail">
+							<a href="#nowhere" class="mailLink" title="联系卖家">
+								<span class="iconfont icon-youjian"></span>
+							</a>
+            	        </span>
+           	     	</div>
+           	 	</div>
+        	</div>
+        	
+        	<div price="888.88" class="productUnitBorder">
+        	    <div class="productUnit">
+        	        <a href="#nowhere">
+        	            <img src="{{
+  url_for('static', filename='pictures/productImg6.jpg') }}" class="productImg" alt="产品样例">
+        	        </a>
+        	        <span class="productPrice">¥888.88</span>
+        	        <a href="#nowhere" class="productLink">
+        	         	Sample
+        	        </a>
+        	        <a href="#nowhere" class="sellerLink">Store</a>
+        	        <div class="show1 productInfo">
+        	            <span class="monthDeal">月成交 <span class="productDealNumber"> - 笔</span></span>
+            	        <span class="productReview">评价<span class="productReviewNumber">-</span></span>
+            	        <span class="mail">
+							<a href="#nowhere" class="mailLink" title="联系卖家">
+								<span class="iconfont icon-youjian"></span>
+							</a>
+            	        </span>
+           	     	</div>
+           	 	</div>
+        	</div>
+        	
+        	<div price="888.88" class="productUnitBorder">
+        	    <div class="productUnit">
+        	        <a href="#nowhere">
+        	            <img src="pictures/productImg6.jpg" class="productImg" alt="产品样例">
+        	        </a>
+        	        <span class="productPrice">¥888.88</span>
+        	        <a href="#nowhere" class="productLink">
+        	         	Sample
+        	        </a>
+        	        <a href="#nowhere" class="sellerLink">Store</a>
+        	        <div class="show1 productInfo">
+        	            <span class="monthDeal">月成交 <span class="productDealNumber"> - 笔</span></span>
+            	        <span class="productReview">评价<span class="productReviewNumber">-</span></span>
+            	        <span class="mail">
+							<a href="#nowhere" class="mailLink" title="联系卖家">
+								<span class="iconfont icon-youjian"></span>
+							</a>
+            	        </span>
+           	     	</div>
+           	 	</div>
+        	</div>
+        	
+        	<div price="888.88" class="productUnitBorder">
+        	    <div class="productUnit">
+        	        <a href="#nowhere">
+        	            <img src="pictures/productImg6.jpg" class="productImg" alt="产品样例">
+        	        </a>
+        	        <span class="productPrice">¥888.88</span>
+        	        <a href="#nowhere" class="productLink">
+        	         	Sample
+        	        </a>
+        	        <a href="#nowhere" class="sellerLink">Store</a>
+        	        <div class="show1 productInfo">
+        	            <span class="monthDeal">月成交 <span class="productDealNumber"> - 笔</span></span>
+            	        <span class="productReview">评价<span class="productReviewNumber">-</span></span>
+            	        <span class="mail">
+							<a href="#nowhere" class="mailLink" title="联系卖家">
+								<span class="iconfont icon-youjian"></span>
+							</a>
+            	        </span>
+           	     	</div>
+           	 	</div>
+        	</div>
+        	
+        	<div price="888.88" class="productUnitBorder">
+        	    <div class="productUnit">
+        	        <a href="#nowhere">
+        	            <img src="pictures/productImg6.jpg" class="productImg" alt="产品样例">
+        	        </a>
+        	        <span class="productPrice">¥888.88</span>
+        	        <a href="#nowhere" class="productLink">
+        	         	Sample
+        	        </a>
+        	        <a href="#nowhere" class="sellerLink">Store</a>
+        	        <div class="show1 productInfo">
+        	            <span class="monthDeal">月成交 <span class="productDealNumber"> - 笔</span></span>
+            	        <span class="productReview">评价<span class="productReviewNumber">-</span></span>
+            	        <span class="mail">
+							<a href="#nowhere" class="mailLink" title="联系卖家">
+								<span class="iconfont icon-youjian"></span>
+							</a>
+            	        </span>
+           	     	</div>
+           	 	</div>
+        	</div>
+        	
+        	<div price="888.88" class="productUnitBorder">
+        	    <div class="productUnit">
+        	        <a href="#nowhere">
+        	            <img src="pictures/productImg6.jpg" class="productImg" alt="产品样例">
+        	        </a>
+        	        <span class="productPrice">¥888.88</span>
+        	        <a href="#nowhere" class="productLink">
+        	         	Sample
+        	        </a>
+        	        <a href="#nowhere" class="sellerLink">Store</a>
+        	        <div class="show1 productInfo">
+        	            <span class="monthDeal">月成交 <span class="productDealNumber"> - 笔</span></span>
+            	        <span class="productReview">评价<span class="productReviewNumber">-</span></span>
+            	        <span class="mail">
+							<a href="#nowhere" class="mailLink" title="联系卖家">
+								<span class="iconfont icon-youjian"></span>
+							</a>
+            	        </span>
+           	     	</div>
+           	 	</div>
+        	</div>
+        	
+        	<div price="888.88" class="productUnitBorder">
+        	    <div class="productUnit">
+        	        <a href="#nowhere">
+        	            <img src="pictures/productImg6.jpg" class="productImg" alt="产品样例">
+        	        </a>
+        	        <span class="productPrice">¥888.88</span>
+        	        <a href="#nowhere" class="productLink">
+        	         	Sample
+        	        </a>
+        	        <a href="#nowhere" class="sellerLink">Store</a>
+        	        <div class="show1 productInfo">
+        	            <span class="monthDeal">月成交 <span class="productDealNumber"> - 笔</span></span>
+            	        <span class="productReview">评价<span class="productReviewNumber">-</span></span>
+            	        <span class="mail">
+							<a href="#nowhere" class="mailLink" title="联系卖家">
+								<span class="iconfont icon-youjian"></span>
+							</a>
+            	        </span>
+           	     	</div>
+           	 	</div>
+        	</div>
+        	
+        	<div price="888.88" class="productUnitBorder">
+        	    <div class="productUnit">
+        	        <a href="#nowhere">
+        	            <img src="pictures/productImg6.jpg" class="productImg" alt="产品样例">
+        	        </a>
+        	        <span class="productPrice">¥888.88</span>
+        	        <a href="#nowhere" class="productLink">
+        	         	Sample
+        	        </a>
+        	        <a href="#nowhere" class="sellerLink">Store</a>
+        	        <div class="show1 productInfo">
+        	            <span class="monthDeal">月成交 <span class="productDealNumber"> - 笔</span></span>
+            	        <span class="productReview">评价<span class="productReviewNumber">-</span></span>
+            	        <span class="mail">
+							<a href="#nowhere" class="mailLink" title="联系卖家">
+								<span class="iconfont icon-youjian"></span>
+							</a>
+            	        </span>
+           	     	</div>
+           	 	</div>
+        	</div>
+        	
+        	<div price="888.88" class="productUnitBorder">
+        	    <div class="productUnit">
+        	        <a href="#nowhere">
+        	            <img src="pictures/productImg6.jpg" class="productImg" alt="产品样例">
+        	        </a>
+        	        <span class="productPrice">¥888.88</span>
+        	        <a href="#nowhere" class="productLink">
+        	         	Sample
+        	        </a>
+        	        <a href="#nowhere" class="sellerLink">Store</a>
+        	        <div class="show1 productInfo">
+        	            <span class="monthDeal">月成交 <span class="productDealNumber"> - 笔</span></span>
+            	        <span class="productReview">评价<span class="productReviewNumber">-</span></span>
+            	        <span class="mail">
+							<a href="#nowhere" class="mailLink" title="联系卖家">
+								<span class="iconfont icon-youjian"></span>
+							</a>
+            	        </span>
+           	     	</div>
+           	 	</div>
+        	</div>
+        	
+        	<div price="888.88" class="productUnitBorder">
+        	    <div class="productUnit">
+        	        <a href="#nowhere">
+        	            <img src="pictures/productImg6.jpg" class="productImg" alt="产品样例">
+        	        </a>
+        	        <span class="productPrice">¥888.88</span>
+        	        <a href="#nowhere" class="productLink">
+        	         	Sample
+        	        </a>
+        	        <a href="#nowhere" class="sellerLink">Store</a>
+        	        <div class="show1 productInfo">
+        	            <span class="monthDeal">月成交 <span class="productDealNumber"> - 笔</span></span>
+            	        <span class="productReview">评价<span class="productReviewNumber">-</span></span>
+            	        <span class="mail">
+							<a href="#nowhere" class="mailLink" title="联系卖家">
+								<span class="iconfont icon-youjian"></span>
+							</a>
+            	        </span>
+           	     	</div>
+           	 	</div>
+        	</div>
+
+        	<script type="text/javascript">
+        		var productinfo = {{ product_info|tojson }};
+        		for (var i=0;i<productinfo.length;i++){
+
+        		}
+        	</script>
+        	
+        	
+        	
+        	
+		</div>
+	</div>
+	
+	
+	<!--分页模块-->
+	<div class="paginationDiv" style="width: 1200px; display: block">
+		<div class="pages">
+        	<div id="Pagination"></div>
+				<div class="searchPage">
+					<span class="page-sum">共<strong class="allPage">10</strong>页</span>
+					<span class="page-go">跳转<input type="text">页</span>
+					<a href="javascript:;" class="page-btn">GO</a>
+				</div>
+    	</div>
+	</div>
+
+	
+	<!--页脚模块-->
+	<div class="footer" style="display: block;margin: auto">
+		<div class="footer1">
+			<div class="footer1Top">
+				<div>
+					<span class="footericon iconfont icon-icon"></span>
+					<div class="footer1Block">
+						<div class="footer1Header">品质保障</div>
+						<div class="footer1Text">品质护航 购物无忧</div>
+					</div>
+				</div>
+				<div>
+					<span class="footericon iconfont icon-qitiantuihuo"></span>
+					<div class="footer1Block">
+						<div class="footer1Header">七天无理由退换货</div>
+						<div class="footer1Text">为您提供售后无忧保障</div>
+					</div>
+				</div>
+				<div>
+					<span class="footericon iconfont icon-icon1460191793239"></span>
+					<div class="footer1Block">
+						<div class="footer1Header">特色服务体验</div>
+						<div class="footer1Text">为您呈现不一样的服务</div>
+					</div>
+				</div>
+				<div>
+					<span class="footericon iconfont icon-bangzhu"></span>
+					<div class="footer1Block">
+						<div class="footer1Header">帮助中心</div>
+						<div class="footer1Text">您的购物指南</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer1Bottom">
+				<div>
+					<p>购物指南</p>
+					<a href="#here">免费注册</a>
+					<a href="#here">关联银行卡</a>
+				</div>
+				<div>
+					<p>天狗保障</p>
+					<a href="#here">发票保障</a>
+					<a href="#here">售后规则</a>
+					<a href="#here">缺货赔付</a>
+				</div>
+				<div>
+					<p>支付方式</p>
+					<a href="#here">快捷支付</a>
+					<a href="#here">信用卡</a>
+					<a href="#here">货到付款</a>
+				</div>
+				<div>
+					<p>商家服务</p>
+					<a href="#here">商家入驻</a>
+					<a href="#here">商家中心</a>
+					<a href="#here">天狗智库</a>
+					<a href="#here">天狗规则</a>
+					<a href="#here">物流服务</a>
+					<a href="#here">运营服务</a>
+				</div>
+				<div>
+					<p>手机天狗</p>
+					<a>敬请期待</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer1Bgc"></div>
+		<div class="footer2">
+			<div class="line1">
+				<a href="#here">关于天狗</a>
+				<a href="#here">帮助中心</a>
+				<a href="#here">开放平台</a>
+				<a href="#here">诚聘英才</a>
+				<a href="#here">联系我们<span>我们也不会回复</span></a>
+				<a href="#here">网站合作</a>
+				<a href="#here">法律声明及隐私权政策</a>
+				<a href="#here"><del>知识产权</del><span>这种东西我们没有</span></a>
+				<a href="#here">廉政举报</a>
+				<a href="#here">规则意见征集<span>我们也不会听</span></a>
+			</div>
+			<div class="line2">
+				<div>增值电信业务经营许可证：<a href="#here"> 浙B2-20110446</a></div>
+				<div>网络文化经营许可证：<a href="#here">浙网文[2015]0295-065号</a></div>
+				<div><a href="#here">12318举报</a></div>
+			</div>
+			<div class="line3">
+				<a href="#here">©2017-2017天狗网版权所有</a>
+			</div>
+		</div>
+		<div class="footer2Bgc"></div>
+	</div>
+</body>
+</html>
